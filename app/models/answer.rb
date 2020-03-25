@@ -1,4 +1,4 @@
 class Answer < ApplicationRecord
-  belongs_to :comment, dependent: :destroy
-  belongs_to :user, dependent: :destroy
+  belongs_to :comment
+  belongs_to :user
 end

@@ -24,11 +24,12 @@ Course.destroy_all
 
 # ==============================================================================================================================================
 puts 'Creating users'
-User.create(email: 'rodiert17@gmail.com', first_name: 'thomas', last_name: 'rodier')
+User.create!(email: 'rodiert17@gmail.com', first_name: 'thomas', last_name: 'rodier', password: 'rodiert17@gmail.com', slug: 'thomas-rodier')
 6.times do
-  User.create!(email: Faker::Internet.email, first_name: Faker::Name.first_name , last_name: Faker::Name.last_name)
+  User.create!(email: Faker::Internet.email, first_name: Faker::Name.first_name , last_name: Faker::Name.last_name, password:'123456', slug: Faker::String.random(length: 6))
 end
 
+puts "#{User.count} Users have been created"
 
 # ==============================================================================================================================================
 puts 'Creating courses'
@@ -59,27 +60,30 @@ Course.create!(title: 'Imbrication - Pallier à la recherchev', slug: 'pallier-r
 Course.create!(title: 'Imbrication - Consolider des fichiers', slug: 'consolidation-fichiers')
 Course.create!(title: 'Certificat - Félicitation ! Tu as terminé la formation Exceltips', slug: 'certificat-exceltips')
 
+puts "#{Course.count} Courses have been created"
 
 # ==============================================================================================================================================
 puts 'Creating ProgressionCourse'
-
-User.all.each |user| do
-  Course.[0..15].each |course| do
+User.all.each do |user|
+  Course.first(15).each do |course|
     ProgressionCourse.create!(course: course, user: user, status: true)
   end
-  Course.[16..24].each |course| do
+  Course.last(11).each do |course|
     ProgressionCourse.create!(course: course, user: user, status: false)
   end
 end
 
+puts "#{ProgressionCourse.count} ProgressionCourses have been created"
 
 # ==============================================================================================================================================
-puts 'Creating Rates'
+puts 'Creating Ratings'
 
-Rating.create!(user: User.offset(1).first, note: 3)
-Rating.create!(user: User.offset(2).first, note: 2)
-Rating.create!(user: User.offset(3).first, note: 4)
-Rating.create!(user: User.offset(4).first, note: 5)
+Rating.create!(user: User.offset(1).first, rate: 3)
+Rating.create!(user: User.offset(2).first, rate: 2)
+Rating.create!(user: User.offset(3).first, rate: 4)
+Rating.create!(user: User.offset(4).first, rate: 5)
+
+puts "#{Rating.count} Ratings have been created"
 
 # ==============================================================================================================================================
 puts 'Creating Comments'
@@ -88,9 +92,15 @@ Comment.create!(user: User.offset(1).first, course: second_course, message: 'Plu
 second_comment = Comment.create!(user: User.offset(2).first, course: second_course, message: 'Bof bof bof franchement. Le gars est un peu con')
 third_comment = Comment.create!(user: User.offset(1).first, course: third_course, message: 'Sympathique et agréable. Je recommande')
 
+puts "#{Comment.count} Comments have been created"
 
 # ==============================================================================================================================================
 puts 'Creating Answers'
 
 Answer.create!(message: 'Merci pour ce beau commentaire. Je vous enmerde grosse #$%*$##...', comment: second_comment, user: User.first)
 Answer.create!(message: 'Ah super agrèable. Bonne continuation à vous', comment: third_comment, user: User.first)
+
+puts "#{Answer.count} Answers have been created"
+
+
+puts 'Well, now it\'s your turn to work ! You are so lazy..... Let\' go dude'

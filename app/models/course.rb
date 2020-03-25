@@ -1,8 +1,7 @@
 class Course < ApplicationRecord
-  has_many :comments
-  has_many :ratings
-  has_many :progression_courses
-  has_many :answers, through: :comments
+  has_many :comments, dependent: :destroy
+  has_many :progression_courses, dependent: :destroy
+  has_many :answers, through: :comments, dependent: :destroy
   has_many :users, through: :progression_courses
 
   validates :title, presence: { not_blank: 'Humm... \'\' n\'est pas un bon titre ....' }
