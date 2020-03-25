@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_25_150105) do
+ActiveRecord::Schema.define(version: 2020_03_25_160534) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,7 +36,6 @@ ActiveRecord::Schema.define(version: 2020_03_25_150105) do
 
   create_table "courses", force: :cascade do |t|
     t.string "title"
-    t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "slug"
@@ -46,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_150105) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "amount", default: 20.0
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
@@ -62,10 +62,8 @@ ActiveRecord::Schema.define(version: 2020_03_25_150105) do
   create_table "ratings", force: :cascade do |t|
     t.integer "note"
     t.bigint "user_id", null: false
-    t.bigint "course_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["course_id"], name: "index_ratings_on_course_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
@@ -93,6 +91,5 @@ ActiveRecord::Schema.define(version: 2020_03_25_150105) do
   add_foreign_key "payments", "users"
   add_foreign_key "progression_courses", "courses"
   add_foreign_key "progression_courses", "users"
-  add_foreign_key "ratings", "courses"
   add_foreign_key "ratings", "users"
 end
