@@ -30,6 +30,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 
+# Add Faker for my Seeds
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+# Add policies with Pundit
+gem 'pundit'
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
