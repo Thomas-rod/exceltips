@@ -1,4 +1,4 @@
-class ProgressionCourse < ApplicationRecord
+class Progression < ApplicationRecord
   belongs_to :user
   belongs_to :course
 end

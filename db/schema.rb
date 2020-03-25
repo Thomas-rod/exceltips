@@ -50,14 +50,14 @@ ActiveRecord::Schema.define(version: 2020_03_25_142319) do
     t.index ["user_id"], name: "index_payments_on_user_id"
   end
 
-  create_table "progression_courses", force: :cascade do |t|
+  create_table "progressions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "course_id", null: false
     t.boolean "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["course_id"], name: "index_progression_courses_on_course_id"
-    t.index ["user_id"], name: "index_progression_courses_on_user_id"
+    t.index ["course_id"], name: "index_progressions_on_course_id"
+    t.index ["user_id"], name: "index_progressions_on_user_id"
   end
 
   create_table "ratings", force: :cascade do |t|
@@ -90,7 +90,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_142319) do
   add_foreign_key "comments", "courses"
   add_foreign_key "comments", "users"
   add_foreign_key "payments", "users"
-  add_foreign_key "progression_courses", "courses"
-  add_foreign_key "progression_courses", "users"
+  add_foreign_key "progressions", "courses"
+  add_foreign_key "progressions", "users"
   add_foreign_key "ratings", "users"
 end

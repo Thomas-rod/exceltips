@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ProgressionCourseTest < ActiveSupport::TestCase
+class ProgressionTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

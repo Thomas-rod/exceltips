@@ -17,7 +17,7 @@ Answer.destroy_all
 puts 'Destroying all ratings'
 Rating.destroy_all
 puts 'Destroying all progression'
-ProgressionCourse.destroy_all
+Progression.destroy_all
 puts 'Destroying all courses'
 Course.destroy_all
 
@@ -63,17 +63,17 @@ Course.create!(title: 'Certificat - Félicitation ! Tu as terminé la formation 
 puts "#{Course.count} Courses have been created"
 
 # ==============================================================================================================================================
-puts 'Creating ProgressionCourse'
+puts 'Creating Progression'
 User.all.each do |user|
   Course.first(15).each do |course|
-    ProgressionCourse.create!(course: course, user: user, status: true)
+    Progression.create!(course: course, user: user, status: true)
   end
   Course.last(11).each do |course|
-    ProgressionCourse.create!(course: course, user: user, status: false)
+    Progression.create!(course: course, user: user, status: false)
   end
 end
 
-puts "#{ProgressionCourse.count} ProgressionCourses have been created"
+puts "#{Progression.count} Progression have been created"
 
 # ==============================================================================================================================================
 puts 'Creating Ratings'
