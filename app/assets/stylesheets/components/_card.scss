@@ -1,1 +1,63 @@
+// LARGE CARD
+
+.card-large {
+  display: grid;
+  grid-template-columns: 180px calc(100% - 250px) 40px;
+  grid-gap: 10px;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  width:820px;
+  max-width:820px;
+  min-width:500px;
+  min-height: 70px;
+  margin: 2%;
+  & img {
+    margin: auto 4%;
+    border-radius: 15px;
+  }
+}
+.inside-card-large {
+  text-align: left;
+  margin: 2% 3%;
+  h4 {
+  	margin-bottom: 2%;
+  }
+}
+
+.status-card {
+  font-size: 24px;
+  margin: auto;
+  & .bi-circle-half {
+	fill:$orange;
+  }
+}
+
+// SMALL CARD
+
+.card-small {
+  display: grid;
+  grid-template-columns: 20% 70%;
+  grid-gap: 10px;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  max-width:340px;
+  min-height: 50px;
+  margin: 2%;
+  & .inside-card {
+  	text-align: left;
+  	margin: auto 3%;
+	}
+}
+
+.fa-check-circle {
+font-size: 32px;
+color: $green;
+}
+
+// IMAGE INSIDE CARD
+.image-course {
+  height: 60px;
+}
+
+
 

@@ -1,0 +1,43 @@
+<div class="navbar-container">
+  <% if course.id == 1 %>
+    <div class="grid-navbar-two">
+      <div class="navbar-colorize">
+        <%= link_to :back, class: 'grid-inside', id: "first-column" do %>
+          <i class="fas fa-chevron-circle-left"></i>
+        <% end %>
+      </div>
+      <div class="navbar-colorize">
+        <%= link_to course_path(course.id + 1), class: 'grid-inside' do %>
+          <div class="grid-transform" id="third-column-two">
+            <p><%= Course.find(course.id + 1).title %></p>
+            <i class="fas fa-chevron-circle-right"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% else %>
+    <div class="grid-navbar-three">
+      <div class="navbar-colorize">
+        <%= link_to :back, class: "grid-inside", id:"first-column" do %>
+          <i class="fas fa-chevron-circle-left"></i>
+        <% end %>
+      </div>
+      <div class="navbar-colorize">
+        <%= link_to course_path(course.id - 1), class: 'grid-inside' do %>
+          <div class="grid-transform" id="second-column">
+            <i class="fas fa-chevron-circle-left"></i>
+            <p><%= Course.find(course.id - 1).title %></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="navbar-colorize">
+        <%= link_to course_path(course.id + 1), class: 'grid-inside' do %>
+          <div class="grid-transform" id="third-column">
+            <p><%= Course.find(course.id + 1).title %></p>
+            <i class="fas fa-chevron-circle-right"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>

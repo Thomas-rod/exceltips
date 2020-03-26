@@ -1,0 +1,48 @@
+<div class="wrapper-global">
+  <%= render partial: 'shared/dashboard_one' %>
+  <div class="container-courses">
+    <div class="section-courses">
+      <h2>Introduction</h2>
+      <div class="card-large">
+        <img src="https://picsum.photos/seed/picsum/180/120" class="image-course" alt="">
+        <div class="inside-card-large">
+          <h4><%= @first_course.title %></h4>
+          <p><%=@first_course.description %></p>
+        </div>
+        <div class="status-card">
+          <%= image_tag 'notdown' %>
+        </div>
+      </div>
+    </div>
+    <div class="section-courses">
+      <h2>Texte - Les indispensables</h2>
+      <% @text_courses.each do |course| %>
+        <div class="card-large">
+          <img src="https://picsum.photos/seed/picsum/180/120" class="image-course" alt="">
+          <div class="inside-card-large">
+            <h4><%= course.title %></h4>
+            <p><%=course.description %></p>
+          </div>
+          <div class="status-card">
+            <%= image_tag 'notdown' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="section-courses">
+      <h2>Business - Les indispensables</h2>
+      <% @business_courses.each do |course| %>
+        <div class="card-large">
+          <img src="https://picsum.photos/seed/picsum/180/120" class="image-course" alt="">
+          <div class="inside-card-large">
+            <h4><%= course.title %></h4>
+            <p><%= course.description %></p>
+          </div>
+          <div class="status-card">
+            <%= image_tag 'notdown' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

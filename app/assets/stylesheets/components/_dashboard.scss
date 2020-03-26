@@ -1,1 +1,63 @@
+// FIRST DASHBOARD
 
+.dashboard-one {
+  height: 100vh;
+  width: 360px;
+  position:sticky;
+  top:0;
+  background-color: $e-green-three;
+}
+
+.progression-circle {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+
+
+.box {
+  max-width: 360px;
+  max-height: 80px;
+  padding: 5% 0% 5% 20%;
+  margin: 10% auto;
+  display:grid;
+  grid-template-columns: 15% 70%;
+  grid-gap: 20px;
+  background-color: $e-green-two;
+  border-radius: 10px;
+  border-right: 7px solid $e-green-two;
+  &:hover {
+  background-color: $e-green-two;
+  opacity: 0.8;
+  cursor:pointer;
+  }
+  p {
+    margin: auto 0px;
+  }
+  .fa-book-open {
+    font-size:24px;
+    line-height: unset !important;
+  }
+  .fa-user-graduate {
+    font-size:24px;
+    line-height: unset !important;
+  }
+}
+
+.active-dashboard {
+  background-color: $e-green-two;
+  opacity: 0.9;
+  border-right: 7px solid $e-green-six;
+}
+
+
+// SECOND DASHBOARD
+
+.dashboard-two {
+  height: 93vh;
+  width: 360px;
+  position:sticky;
+  top:0;
+  background-color: $e-green-three;
+}

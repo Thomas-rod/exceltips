@@ -1,0 +1,134 @@
+.navbar-container {
+  height: 7vh;
+  width: 100%;
+  margin: 0% auto;
+  // color:$e-green-three;
+}
+
+
+// GRID FOR FIRST COURSE
+
+.grid-navbar-two {
+  display:grid;
+  grid-template-columns: 360px auto;
+  grid-template-rows: 48px;
+  .grid-inside {
+    text-align:center;
+    height:100%;
+    width:100%;
+    line-height:50px;
+  }
+  a {
+      text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+#third-column-two {
+  justify-content: flex-start;
+  padding-left: 30%;
+  color: $gray;
+  &:hover{
+    transform: translateX(+4px);
+    transition: 0.5s;
+  }
+  .fa-chevron-circle-right {
+    padding-left: 40px;
+    color: $gray;
+  }
+}
+
+
+// GRID FOR OTHER COURSES
+
+.grid-navbar-three {
+  display:grid;
+  grid-template-columns: minmax(100px,360px) minmax(100px, 540px) minmax(100px, 540px);
+  grid-template-rows: 48px;
+  .grid-inside {
+    height:100%;
+    width:100%;
+    line-height:50px;
+    &:last-child {
+      height:100%;
+      width:100%;
+      line-height:50px;
+      }
+    }
+}
+
+.navbar-colorize {
+  height:100%;
+  width:100%;
+  background-color: $gray;
+  color: $e-green-three;
+  &:last-child {
+    height:100%;
+    width:100%;
+    background-color: $e-green-three;
+    color: $gray;
+  }
+  &:first-child {
+    border-right: 1px solid rgba(white, 0.9);
+  }
+}
+
+.grid-transform {
+  width:90%;
+  display:flex;
+  align-items:center;
+  margin: 0 2%;
+}
+
+#first-column {
+  justify-content: flex-start;
+  .fa-chevron-circle-left {
+    position:absolute;
+    left: 7%;
+    &:hover {
+      transform: translateX(-4px);
+      transition: 0.5s;
+    }
+  }
+}
+
+#second-column {
+  justify-content: flex-end;
+  padding-right: 40px;
+  color: $e-green-three;
+  &:hover {
+    transform: translateX(-4px);
+    transition: 0.5s;
+  }
+  .fa-chevron-circle-left {
+    padding-right: 40px;
+    color: $e-green-three;
+  }
+}
+#third-column {
+  justify-content: flex-start;
+  padding-left: 40px;
+  color: $gray;
+  &:hover{
+    transform: translateX(+4px);
+    transition: 0.5s;
+  }
+  .fa-chevron-circle-right {
+    padding-left: 40px;
+    color: $gray;
+  }
+}
+
+
+
+// ICONS
+.fa-chevron-circle-left, .fa-chevron-circle-right {
+  text-align:left;
+  font-size:24px;
+  line-height:unset !important;
+  &:first-child {
+    color: $e-green-three;
+  }
+}
