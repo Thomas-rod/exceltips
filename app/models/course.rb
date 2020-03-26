@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
   has_many :comments, dependent: :destroy
-  has_many :progression, dependent: :destroy
+  has_many :progressions, dependent: :destroy
   has_many :answers, through: :comments, dependent: :destroy
   has_many :users, through: :progression
 

@@ -1,4 +1,4 @@
-class ProgressionsPolicy < ApplicationPolicy
+class ProgressionPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
       scope.all

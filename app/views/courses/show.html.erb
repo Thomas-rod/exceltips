@@ -1,23 +1,7 @@
 <%= render partial: 'shared/navbar_dashboard', locals: { course: @course}  %>
-<div class="dashboard-two">
-  <div class="progression-circle">
-    <h2>Exceltips</h2>
-    <%= render partial: 'shared/progression' %>
-  </div>
-  <div class="navigation-box">
-    <div class="box active-dashboard">
-      <!-- ADD LINK TO  -->
-      <%#= link_to ....,  %>
-      <i class="fas fa-book-open"></i>
-      <p>Exceltips - Formation</p>
-      <%# end %>
-    </div>
-    <div class="box">
-      <!-- ADD LINK TO  -->
-      <%#= link_to ....,  %>
-      <i class="fas fa-user-graduate"></i>
-      <p>Thomas - Professeur</p>
-      <%# end %>
-    </div>
+<div class="wrapper-global">
+  <%= render partial: 'shared/dashboard_two', locals: { course: @course, courses: @courses}  %>
+  <div class="display-course">
+    <%= @course.title %>
   </div>
 </div>

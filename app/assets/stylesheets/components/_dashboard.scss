@@ -2,7 +2,7 @@
 
 .dashboard-one {
   height: 100vh;
-  width: 360px;
+  width: 359px;
   position:sticky;
   top:0;
   background-color: $e-green-three;
@@ -56,8 +56,14 @@
 
 .dashboard-two {
   height: 93vh;
-  width: 360px;
+  width: 359px;
   position:sticky;
   top:0;
   background-color: $e-green-three;
+}
+
+.navigation-box {
+  width: 359px;
+  height: 77%;
+  overflow-y: scroll;
 }

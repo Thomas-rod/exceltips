@@ -1,2 +1,3 @@
 class ProgressionsController < ApplicationController
+
 end
