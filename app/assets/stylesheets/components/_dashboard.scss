@@ -24,11 +24,12 @@
   display:grid;
   grid-template-columns: 15% 70%;
   grid-gap: 20px;
-  background-color: $e-green-two;
+  // background-color: $e-green-two;
   border-radius: 10px;
-  border-right: 7px solid $e-green-two;
+  border-right: 7px solid $e-green-three;
   &:hover {
   background-color: $e-green-two;
+  border-right: 7px solid $e-green-two;
   opacity: 0.8;
   cursor:pointer;
   }
@@ -55,7 +56,7 @@
 // SECOND DASHBOARD
 
 .dashboard-two {
-  height: 93vh;
+  height: 94vh;
   width: 359px;
   position:sticky;
   top:0;

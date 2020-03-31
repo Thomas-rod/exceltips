@@ -66,10 +66,10 @@ puts "#{Course.count} Courses have been created"
 puts 'Creating Progression'
 User.all.each do |user|
   Course.first(15).each do |course|
-    Progression.create!(course: course, user: user, status: true)
+    Progression.create!(course: course, user: user)
   end
   Course.last(11).each do |course|
-    Progression.create!(course: course, user: user, status: false)
+    Progression.create!(course: course, user: user)
   end
 end
 

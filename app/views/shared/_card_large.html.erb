@@ -1,10 +1,16 @@
-<div class="card-large">
+<div class="card-large <%= progression.status_visited_card %>">
   <img src="https://picsum.photos/seed/picsum/180/120" alt="">
   <div class="inside-card-large">
-    <h6><%= course.title %></h6>
-    <p><%= course.description %></p>
+    <h6><%= progression.course.title %></h6>
+    <p><%= progression.course.description %></p>
   </div>
   <div class="status-card">
-    <i class="fas fa-check-circle"></i>
+    <% if progression.visited == false %>
+      <i class="far fa-circle"></i>
+    <% elsif progression.status == false %>
+      <%= image_tag 'notdown'%>
+    <% else %>
+      <i class="fas fa-check-circle"></i>
+    <% end %>
   </div>
 </div>

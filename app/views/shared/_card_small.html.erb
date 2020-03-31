@@ -1,8 +1,14 @@
-<div class="card-small">
+<div class="card-small <%= progression.status_visited_card %>">
   <div class="status-card">
-    <%= image_tag 'notdown'%>
+    <% if progression.visited == false %>
+      <i class="far fa-circle"></i>
+    <% elsif progression.status == false %>
+      <%= image_tag 'notdown'%>
+    <% else %>
+      <i class="fas fa-check-circle"></i>
+    <% end %>
   </div>
   <div class="inside-card-small">
-    <h6><%= course.title %></h6>
+    <h6><%= progression.course.title %></h6>
   </div>
 </div>

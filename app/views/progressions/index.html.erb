@@ -1,0 +1,36 @@
+<div class="wrapper-global">
+  <%= render partial: 'shared/dashboard_one' %>
+  <div class="container-courses">
+    <div class="section-courses">
+      <h3>Introduction</h3>
+      <%= link_to progression_path(@first_progression) do %>
+        <%= render partial: 'shared/card_large', locals: { progression: @first_progression } %>
+      <% end %>
+    </div>
+    <div class="section-courses">
+      <h3>Texte - Les indispensables</h3>
+      <% @text_progressions.each do |progression| %>
+        <%= link_to progression_path(progression) do %>
+          <%= render partial: 'shared/card_large', locals: { progression: progression } %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="section-courses">
+      <h3>Business - Les indispensables</h3>
+      <% @business_progressions.each do |progression| %>
+        <%= link_to progression_path(progression) do %>
+          <%= render partial: 'shared/card_large', locals: { progression: progression } %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="section-courses">
+      <h3>Imbrications - Les indispensables</h3>
+      <% @imbrication_progressions.each do |progression| %>
+        <%= link_to progression_path(progression) do %>
+          <%= render partial: 'shared/card_large', locals: { progression: progression } %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

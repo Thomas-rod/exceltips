@@ -1,0 +1,7 @@
+<%= render partial: 'shared/navbar_dashboard', locals: { progression: @progression}  %>
+<div class="wrapper-global">
+  <%= render partial: 'shared/dashboard_two', locals: { progression: @progression, progressions: @progressions}  %>
+  <div class="display-progression">
+    <%= @progression.course.title %>
+  </div>
+</div>

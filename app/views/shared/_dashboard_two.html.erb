@@ -4,8 +4,10 @@
     <%= render partial: 'shared/progression' %>
   </div>
   <div class="navigation-box">
-    <% courses.each do |course| %>
-      <%= render partial: 'shared/card_small', locals: { course: course} %>
+    <% progressions.each do |progression| %>
+      <%= link_to progression_path(progression) do %>
+        <%= render partial: 'shared/card_small', locals: { progression: progression} %>
+      <% end %>
     <% end %>
   </div>
 </div>

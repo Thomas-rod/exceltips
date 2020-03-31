@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2020_03_26_212102) do
   create_table "progressions", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "course_id", null: false
-    t.boolean "status"
+    t.boolean "status", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.boolean "visited", default: false
