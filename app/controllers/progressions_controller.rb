@@ -3,12 +3,10 @@ class ProgressionsController < ApplicationController
   before_action :progression_user, only: [:show, :update]
 
   def index
-    # @progressions = policy_scope(Progression)
     @first_progression = @progressions.first
     @text_progressions = @progressions.offset(1).first(7)
     @business_progressions = @progressions.offset(8).first(10)
     @imbrication_progressions = @progressions.last(7)
-    # raise
   end
 
   def show
