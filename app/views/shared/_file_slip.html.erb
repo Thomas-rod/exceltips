@@ -1,0 +1,10 @@
+<% unless progression.course.pdf_slip.first == "" %>
+  <% progression.course.pdf_slip.each do |slip| %>
+    <%= link_to "#{slip}", target: '_blank', class: "course-download" do %>
+      <div class="doc-course">
+        <i class="fas fa-clipboard icon"></i>
+        <p>Fiche</p>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

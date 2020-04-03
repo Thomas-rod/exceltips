@@ -1,0 +1,21 @@
+.doc-course {
+  display:block;
+  text-align:center;
+  &:hover {
+      transition: 0.1s;
+      color:$e-green-four;
+    .icon {
+      transition: 0.1s;
+      color:$e-green-four;
+    }
+  }
+}
+
+.course-download {
+  width:15%;
+}
+
+.icon {
+  font-size: 2.5em;
+  color: $e-green-five;
+}

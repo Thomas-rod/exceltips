@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
     resources :ratings, only: [:show]
   end
-  resources :progressions, only: [:index, :show]
+  resources :progressions, only: [:index, :show] do
+    post 'status' => 'progressions#status_update', as: :status_update
+  end
+
   resources :payments, only: [:create, :show]
 end

@@ -1,0 +1,10 @@
+  <% unless progression.course.pdf_course.first == "" %>
+  <% progression.course.pdf_course.each do |pdf| %>
+    <%= link_to "#{pdf}", target: '_blank', class: "course-download" do %>
+      <div class="doc-course">
+        <i class="fas fa-book icon"></i>
+        <p>Cours</p>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

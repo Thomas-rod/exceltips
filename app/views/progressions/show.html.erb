@@ -1,7 +1,19 @@
-<%= render partial: 'shared/navbar_dashboard', locals: { progression: @progression}  %>
+<%= render partial: 'shared/navbar_dashboard', locals: { progression: @progression }  %>
 <div class="wrapper-global">
-  <%= render partial: 'shared/dashboard_two', locals: { progression: @progression, progressions: @progressions}  %>
-  <div class="display-progression">
-    <%= @progression.course.title %>
+  <%= render partial: 'shared/dashboard_two', locals: { progression: @progression, progressions: @progressions }  %>
+  <div id="display-progression">
+    <div id="progression-header">
+      <h5 id="title-progression"><%= @progression.course.title %></h5>
+      <div class="progression-doc">
+        <%= render partial: 'shared/file_course', locals: { progression: @progression } %>
+        <%= render partial: 'shared/file_slip', locals: { progression: @progression } %>
+        <%= render partial: 'shared/file_exercice', locals: { progression: @progression } %>
+      </div>
+    </div>
+    <div id="progression-body">
+      <%= youtube_video(@progression) %>
+    </div>
+    <div class="progression-footer">
+    </div>
   </div>
 </div>

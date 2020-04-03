@@ -1,0 +1,10 @@
+  <% unless progression.course.excel_course.first == "" %>
+  <% progression.course.excel_course.each do |excel| %>
+    <%= link_to "#{excel}", target: '_blank', class: "course-download" do %>
+      <div class="doc-course">
+        <i class="fas fa-book icon"></i>
+        <p>Exercice</p>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

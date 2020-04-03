@@ -2,14 +2,14 @@
   <% if progression.course.id == 1 %>
     <div class="grid-navbar-two">
       <div class="navbar-colorize">
-        <%= link_to :back, class: 'grid-inside', id: "first-column" do %>
+        <%= link_to progressions_path, class: 'grid-inside', id: "first-column" do %>
           <i class="fas fa-chevron-circle-left"></i>
         <% end %>
       </div>
       <div class="navbar-colorize">
-        <%= link_to progression_path(progression.id + 1), class: 'grid-inside' do %>
+        <%= button_to progression_status_update_path(progression.id), class: 'grid-inside', id: 'complete-progression' do %>
           <div class="grid-transform" id="third-column-two">
-            <p><%= Progression.find(progression.id + 1).course.title %></p>
+            <p>Compléter et passer au cours suivant</p>
             <i class="fas fa-chevron-circle-right"></i>
           </div>
         <% end %>
@@ -18,7 +18,7 @@
   <% else %>
     <div class="grid-navbar-three">
       <div class="navbar-colorize">
-        <%= link_to :back, class: "grid-inside", id:"first-column" do %>
+        <%= link_to progressions_path, class: "grid-inside", id:"first-column" do %>
           <i class="fas fa-chevron-circle-left"></i>
         <% end %>
       </div>
@@ -26,14 +26,15 @@
         <%= link_to progression_path(progression.id - 1), class: 'grid-inside' do %>
           <div class="grid-transform" id="second-column">
             <i class="fas fa-chevron-circle-left"></i>
-            <p><%= Progression.find(progression.id - 1).course.title %></p>
+            <p>Revenir au cours précédent</p>
           </div>
         <% end %>
       </div>
       <div class="navbar-colorize">
-        <%= link_to progression_path(progression.id + 1), class: 'grid-inside' do %>
+        <!-- schedule_visit_path(schedule, visit, visit: { status: "accepted"}), method: :patch, remote: :true -->
+        <%= button_to progression_status_update_path(progression.id), class: 'grid-inside', id: 'complete-progression' do %>
           <div class="grid-transform" id="third-column">
-            <p><%= Progression.find(progression.id + 1).course.title %></p>
+            <p>Compléter et passer au cours suivant</p>
             <i class="fas fa-chevron-circle-right"></i>
           </div>
         <% end %>

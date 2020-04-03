@@ -27,9 +27,15 @@ gem 'redis', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-
+# Add Devise for users
 gem 'devise'
 
+# Stripe for payments
+gem 'stripe'
+# Add Jquery for JS
+gem 'jquery-rails'
+# Add cloudinary for courses vidéos
+gem 'cloudinary', '~> 1.12.0'
 # Add Faker for my Seeds
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Add policies with Pundit
