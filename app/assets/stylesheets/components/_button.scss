@@ -1,1 +1,28 @@
+.button-navbar {
+  padding: 10px 20px;
+  // background-color:green;
+  border: 1px solid $e-green-one;
+  color: $e-green-one;
+  font-weight: bold;
+  border-radius: 15px;
+  &:hover {
+    transition: 0.2s;
+    border: 1px solid $e-green-one;
+    color: white;
+    background-color: $e-green-one;
+    border-radius: 15px;
+  }
+}
 
+.active-navbar {
+background-color: $e-green-one;
+color:white;
+font-weight:bold;
+&:hover {
+  transition: 0.2s;
+    border: 1px solid $e-green-one;
+    color: $e-green-one;
+    background-color: white;
+    border-radius: 15px;
+  }
+}

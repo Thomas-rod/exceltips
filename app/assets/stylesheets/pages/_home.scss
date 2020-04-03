@@ -1,22 +1,13 @@
-// Specific CSS for your home-page
-h1, h2, h3, h4, h5, h6, p {
-  margin:0;
-  padding: 0;
+#navbar-home {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-a {
-  color: $gray;
-  text-decoration: none;
-  &:hover {
-    color: $gray;
-    text-decoration: none;
-  }
+#navbar-logo {
+  padding: 10px 0px 0px 10px;
 }
+#navbar-button {
+  padding: 10px 20px;
 
-.wrapper-global {
-  display: flex;
-}
-
-button {
-  all: unset;
 }

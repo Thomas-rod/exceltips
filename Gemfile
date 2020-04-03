@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 ruby '2.6.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -30,6 +32,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Add Devise for users
 gem 'devise'
 
+# MoneyRails to deal with money in my app
+gem 'money-rails', '~>1.12'
 # Stripe for payments
 gem 'stripe'
 # Add Jquery for JS

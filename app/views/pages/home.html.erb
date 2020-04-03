@@ -1,3 +1,15 @@
-<%= link_to 'Se connecter', new_user_session_path %>
-<%= link_to 'Créer un compte', new_user_registration_path %>
-<%= link_to 'Cours', progressions_path %>
+<div id="navbar-home">
+  <div id="navbar-logo">
+  <%= image_tag 'logo_exceltips', class: 'logo-avatar' %>
+  </div>
+  <div id="navbar-button">
+    <% if user_signed_in? %>
+      <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
+    <% else %>
+      <%= link_to 'Se connecter', new_user_session_path, class: 'button-navbar' %>
+    <% end %>
+  </div>
+</div>
+<div class="banner-navbar">
+  <%= link_to 'Acheter la formation', new_user_registration_path, class: 'button-navbar active-navbar'%>
+</div>
