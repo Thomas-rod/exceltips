@@ -1,9 +1,15 @@
 class ProgressionPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope.all
+      if user.admin?
+        scope.all
+      else
+        scope.where(user_id: @user.id).order(:id)
+      end
     end
+
   end
+
   def index?
     true
   end
@@ -13,6 +19,10 @@ class ProgressionPolicy < ApplicationPolicy
   end
 
   def create?
+    true
+  end
+
+  def status_update?
     true
   end
 
