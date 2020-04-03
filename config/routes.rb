@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     post 'status' => 'progressions#status_update', as: :status_update
   end
 
-  resources :payments, only: [:create, :show]
+  resources :order, only: [:create, :show]
 end
