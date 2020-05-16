@@ -7,7 +7,7 @@ class CreateCourses < ActiveRecord::Migration[6.0]
       t.string :pdf_course, array: true, default: []
       t.string :pdf_slip, array: true, default: []
       t.string :excel_course, array: true, default: []
-      t.string :video_url, array: true, default: []
+      t.string :video_id, :string, default: ""
       t.timestamps
     end
   end

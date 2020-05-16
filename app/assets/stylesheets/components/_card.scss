@@ -1,4 +1,6 @@
-// LARGE CARD
+/*-------------------------------*/
+//-----------#LARGE CARD---------//
+/*-------------------------------*/
 
 .card-large {
   display: grid;
@@ -44,7 +46,9 @@
   }
 }
 
-// SMALL CARD
+/*-------------------------------*/
+//-----------#SMALL CARD---------//
+/*-------------------------------*/
 
 .card-small {
   display: grid;
@@ -71,6 +75,54 @@ font-size: 32px;
 color: $e-green-six;
 }
 
+
+/*-------------------------------*/
+//---------#COMMENT CARD---------//
+/*-------------------------------*/
+.card-comment {
+  margin-left:30px;
+  padding-bottom:10px;
+  margin-bottom: 15px;
+  display:grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas:
+      "one two"
+  ;
+  .avatar-comment {
+    align-content:center;
+    grid-area: one;
+  }
+  .comment-message {
+    grid-area: two;
+  }
+}
+      .comment-message {
+        width:100%;
+        border-radius: 15px;
+        box-shadow: $box-shadow;
+        background-color: rgba(0, 0, 0, 0.02);
+        padding: 1rem;
+        p:nth-child(2){
+          font-weight:lighter;
+          font-size: 0.8rem;
+          color: rgba(black, 0.6);
+        }
+      }
+      .border-comment {
+        text-align:start;
+        font-weight:lighter;
+        font-style: lighter;
+      }
+
+
+
+
+
+
+/*-------------------------------*/
+//-----------#OTHER CARD---------//
+/*-------------------------------*/
 // IMAGE INSIDE CARD
 .image-course {
   height: 60px;

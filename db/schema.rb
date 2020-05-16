@@ -63,7 +63,8 @@ ActiveRecord::Schema.define(version: 2020_04_03_161547) do
     t.string "pdf_course", default: [], array: true
     t.string "pdf_slip", default: [], array: true
     t.string "excel_course", default: [], array: true
-    t.string "video_url", default: [], array: true
+    t.string "video_id", default: ""
+    t.string "string", default: ""
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

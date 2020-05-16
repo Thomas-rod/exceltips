@@ -1,8 +1,18 @@
+/*-------------------------------*/
+//--------#CSS POSITION----------//
+/*-------------------------------*/
+
+
 #display-progression {
   padding: 1%;
   width:100%;
   height:94vh;
+  overflow-y:auto;
 }
+
+/*-------------------------------*/
+//-------#PROGRESSION HEADER-----//
+/*-------------------------------*/
 
 #progression-header{
   min-height: 10%;
@@ -14,16 +24,60 @@
   width: 40%;
   display:flex;
   justify-content:space-around;
-  align-items:center;
+
 }
+
+/*-------------------------------*/
+//-------#PROGRESSION HEADER-----//
+/*-------------------------------*/
 
 
 #progression-body {
-  display:flex;
-  justify-content:center;
   align-items:center;
-  margin: 40px auto;
+  margin: 15px auto;
+
 }
+
+
+/*-------------------------------*/
+//-------#PROGRESSION COMMENT----//
+/*-------------------------------*/
+
+.add-comment-section {
+  margin: 40px 90px 20px 90px;
+  width: 80%;
+  display:grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas:
+      "one two"
+  ;
+  .avatar-comment {
+    grid-area: one;
+  }
+  .create-comment-section {
+    grid-area:two;
+  }
+}
+
+    .create-comment-section {
+      width:100%;
+      .form-control {
+        border: none;
+        box-shadow: $box-shadow;
+        height:100%;
+      }
+    }
+.comments-section {
+  margin: 0 10%;
+  width:70%;
+}
+
+
+
+/*-------------------------------*/
+//---------#OTHER STUFF----------//
+/*-------------------------------*/
 
 // FONT
 #title-progression {
@@ -33,7 +87,19 @@
 
 
 // VIDEO
-.video-course {
-  width:90%;
-  height:auto;
+.video-youtube {
+  margin: 0px 90px;
+  width:80%;
+  min-height:60vh;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.coming-soon {
+  background-color: rgba($e-green-two, 0.9);
+  h4 {
+    color: $e-green-three;
+    font-weight:bold;
+  }
+
 }

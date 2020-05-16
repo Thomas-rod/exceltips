@@ -4,6 +4,11 @@
   <div id="display-progression">
     <div id="progression-header">
       <h5 id="title-progression"><%= @progression.course.title %></h5>
+      <% if @progression.status %>
+        <span class="label done">Complété</span>
+      <% else %>
+        <span class="label undone">En cours</span>
+      <% end %>
       <div class="progression-doc">
         <%= render partial: 'shared/file_course', locals: { progression: @progression } %>
         <%= render partial: 'shared/file_slip', locals: { progression: @progression } %>
@@ -11,9 +16,34 @@
       </div>
     </div>
     <div id="progression-body">
-      <%= youtube_video(@progression) %>
-    </div>
-    <div class="progression-footer">
+      <% unless @progression.course.title[0..3] == "Imbr" %>
+        <iframe class="video-youtube" src='https://www.youtube.com/embed/<%= @progression.course.video_id %>?rel=0&autoplay=<%= params[:autoplay] || 0 %>' frameborder='0' allowfullscreen></iframe>
+      <% else %>
+        <span class="video-youtube coming-soon"><h4>La vidéo arrive bientôt ! Je t'invite à télécharger le cours en attendant</h4></span>
+      <% end %>
+      <div class="progression-footer">
+        <div class="add-comment-section">
+          <div class="avatar-comment"><h3 ><%= current_user.first_name[0].upcase %></h3></div>
+          <div class="create-comment-section">
+            <%= simple_form_for @comment, url: comments_path(@comment, user: current_user, progression: @progression), method: 'post' do |f| %>
+              <%= f.input :message,label: "Ecrire un message", type: 'text', input_html: { 'rows' => 4, placeholder: 'Wahou super cours ! Merci Thomas '} %>
+              <%= f.button :submit, 'Poster', class:"active-navbar"%>
+            <% end %>
+          </div>
+        </div>
+        <div class="comments-section">
+          <% @comments.each do |comment| %>
+          <div class="card-comment">
+            <h3 class="avatar-comment"><%= comment.user.first_name[0].upcase %></h3>
+            <div class="comment-message">
+              <p><strong><%= comment.user.first_name.capitalize %> <%= comment.user.last_name.first.capitalize %>.</strong></p>
+              <p><%= l(comment.created_at, format: "%d %B %Y") %> </p>
+              <span class="border-comment"><p><%= comment.message %></p></span>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

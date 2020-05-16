@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   end
   resources :progressions, only: [:index, :show] do
     post 'status' => 'progressions#status_update', as: :status_update
+    resources :comment, only: [:index]
   end
+  post 'comments/', to: 'comments#create'
 
   resources :order, only: [:create, :show]
 end

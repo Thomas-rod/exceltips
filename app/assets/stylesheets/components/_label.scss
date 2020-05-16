@@ -1,0 +1,16 @@
+.label {
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.done {
+  border: 1px solid rgba(green, 0.1);
+  background-color: rgba(green, 0.2);
+  color: rgba(green, 0.9);
+}
+
+.undone {
+  border: 1px solid rgba(orange, 0.1);
+  background-color: rgba(orange, 0.2);
+  color: rgba(orange, 0.9);
+}

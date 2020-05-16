@@ -19,7 +19,7 @@ class ProgressionPolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    false
   end
 
   def status_update?
@@ -27,6 +27,6 @@ class ProgressionPolicy < ApplicationPolicy
   end
 
   def update?
-    true if current_user == user || current_user.admin == true
+    return true if progression.user == @user || @user.admin == true
   end
 end
