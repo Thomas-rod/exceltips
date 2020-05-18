@@ -1,6 +1,6 @@
 class AnswersController < ApplicationController
   after_action :redirect_course, only: [:create, :update, :destroy]
-  before_action :
+
   def create
     @answer = authorize Answer.new(answer_params)
     @answer.user = current_user
