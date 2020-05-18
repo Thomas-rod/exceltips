@@ -1,5 +1,4 @@
-<div class="content">
-  <div class="group">
-    <div class="circular-progress100"></div>
-  </div>
+<% @progress_student = number_to_percentage((current_user.progressions.select{ |p| p.status == true}.count.to_f / current_user.progressions.count.to_f)*100, precision: 0) %>
+<div class="progress">
+  <div class="progress-bar <%= "complete" if @progress_student.to_i == 100 %>" role="progressbar" style="width: <%= @progress_student %>;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><%= @progress_student %></div>
 </div>

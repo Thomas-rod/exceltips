@@ -4,19 +4,17 @@
     <%= render partial: 'shared/progression' %>
   </div>
   <div class="navigation-box">
-    <div class="box active-dashboard">
-      <!-- ADD LINK TO  -->
-      <%#= link_to ....,  %>
+    <%= link_to progressions_path, class:"box active-dashboard" do  %>
       <i class="fas fa-book-open"></i>
       <p>Exceltips - Formation</p>
-      <%# end %>
-    </div>
-    <div class="box">
-      <!-- ADD LINK TO  -->
-      <%#= link_to ....,  %>
+    <% end %>
+    <%= link_to '#', class:"box" do  %>
       <i class="fas fa-user-graduate"></i>
       <p>Thomas - Professeur</p>
-      <%# end %>
-    </div>
+    <% end %>
+    <%= link_to destroy_user_session_path, method: 'delete', class:"box" do %>
+      <i class="fas fa-sign-out-alt icon-dashboard"></i>
+      <p>Se déconnecter</p>
+    <% end %>
   </div>
 </div>

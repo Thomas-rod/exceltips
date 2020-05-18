@@ -9,9 +9,22 @@
 }
 
 .progression-circle {
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
+  img {
+    display:block;
+    margin: 0.5rem auto;
+  }
+  .progress {
+    margin: 0.5rem auto;
+    width: 50%;
+  }
+  .progress-bar {
+    background-color: rgba($orange, 0.7);
+    box-shadow:$box-shadow;
+    &.complete {
+      background-color: $green;
+    }
+  }
+
 }
 
 
@@ -24,10 +37,9 @@
   display:grid;
   grid-template-columns: 15% 70%;
   grid-gap: 20px;
-  // background-color: $e-green-two;
   border-radius: 10px;
   border-right: 7px solid $e-green-three;
-  &:hover {
+  &:hover:not(.active-dashboard) {
   background-color: $e-green-two;
   border-right: 7px solid $e-green-two;
   opacity: 0.8;
@@ -41,6 +53,10 @@
     line-height: unset !important;
   }
   .fa-user-graduate {
+    font-size:24px;
+    line-height: unset !important;
+  }
+  .fa-sign-out-alt {
     font-size:24px;
     line-height: unset !important;
   }
