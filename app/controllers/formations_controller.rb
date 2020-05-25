@@ -1,2 +1,0 @@
-class FormationsController < ApplicationController
-end

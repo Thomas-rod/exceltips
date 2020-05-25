@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   end
   post 'comments/', to: 'comments#create'
 
-  resources :order, only: [:create, :show]
+  resources :charges
 end
