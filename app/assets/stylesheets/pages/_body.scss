@@ -17,8 +17,18 @@ a {
   display: flex;
 }
 ul, li {
-  padding-left:0px;
+  padding:0px;
+  margin: 0px;
 }
 button {
   all: unset;
 }
+
+h1 {font-size: 2rem;}
+h2 {font-size: 1.8rem;}
+h3 {font-size: 1.6rem;}
+h4 {font-size: 1.5rem;}
+h5 {font-size: 1.3rem;}
+h6 {font-size: 1.2rem;}
+p {font-size: 1rem;}
+a{font-size: 1.25rem;}

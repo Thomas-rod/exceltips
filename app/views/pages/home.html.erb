@@ -9,19 +9,18 @@
 <div id="banner-home">
   <div id="banner-home--title">
     <h1>2 heures pour maîtriser Excel</h1>
-    <h3>Apprendre l'essentiel, c'est tout ce qu'il vous faut.</h3>
+    <h3>C'est tout ce qu'il vous faut.</h3>
+    <a href="#" class="button-navbar">Rejoindre la formation</a>
   </div>
-  <div id="banner-home--img">
-    <%#= image_tag "me_detoure.png" %>
-  </div>
+  <%= image_tag "detour_me_two.png" %>
 </div>
 <div id="statistic">
   <div id="udemy-subscriptions">
-    <h2>+1000 inscriptions sur</h2>
+    <h3>+1000 inscriptions</h3>
     <%= image_tag 'udemy_logo.svg' %>
   </div>
   <div id="udemy-rating">
-    <h2>Noté 4.5 sur 5</h2>
+    <h3>Noté 4.5 sur 5</h3>
     <ul>
       <li class="star-rating"><i class="fas fa-star"></i></li>
       <li class="star-rating"><i class="fas fa-star"></i></li>
@@ -66,10 +65,10 @@
 <div id="kind-student">
   <h2>Excel ne doit plus être un frein dans votre vie professionnelle</h2>
   <p>Si rien que le mot Excel vous fait frémir, que vous ne vous sentez pas à l'aise avec Excel ou que vous ne savez pas comment fonctionne une RechercheV</p>
-  <strong><a href=""><h6>La formation Exceltips est faite pour vous</h6></a></strong>
+  <strong><h6>La formation Exceltips est faite pour vous</h6></strong>
 </div>
 <div id="program-exceltips">
-  <h2 class="label-title">Quel est <span class="label-pointer">le programme</span> de la formation Exceltips ?</h2>
+  <h2 class="label-title">Le<span class="label-pointer"> programme</span> de la formation Exceltips ?</h2>
   <h4>L'essentiel, rien d'autre.</h4>
   <ul>
     <li>
@@ -114,55 +113,99 @@
       </div>
     </li>
   </ul>
-  <a href="" class="button-navbar">Me former avec Exceltips</a>
 </div>
 <div id="price-section">
-  <h2 class="label-title">Prix</h2>
+  <h2 class="label-title">Quel est le <span class="label-pointer">prix</span></h2>
   <div class="card-price">
     <div class="card-price--body">
       <div class="card-price--column">
-        <span><i class="fas fa-caret-right"></i> <h6><strong>+15 vidéos explicatives</strong></h6></span>
-        <span><i class="fas fa-caret-right"></i><h6><strong>Avant première aux nouveaux cours</strong></h6></span>
-        <span><i class="fas fa-caret-right"></i><h6><strong>Accès à vie</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i> <h6><strong>Accès à la formation Exceltips à vie</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>Accès à la communeauté Exceltips</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>Ebook +60 pages</strong></h6></span>
       </div>
       <div class="card-price--column">
-        <span><i class="fas fa-caret-right"></i><h6><strong>Ebook +60 pages</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>+15 vidéos explicatives</strong></h6></span>
         <span><i class="fas fa-caret-right"></i><h6><strong>+15 fiches téléchargeables</strong></h6></span>
         <span><i class="fas fa-caret-right"></i><h6><strong>+15 exercices à réaliser</strong></h6></span>
       </div>
     </div>
-    <h3 id="label-price">50€</h3>
+    <div class="card-price--footer">
+      <span id="label-price"><h2>50€</h2><h4>ttc</h4></span>
+      <div>
+        <h3>Satisfait ou remboursé</h3>
+        <a href="" class="button-navbar">Me former avec Exceltips</a>
+      </div>
+    </div>
   </div>
 </div>
-<div id="callback-value">
-  <h4>100% en ligne</h4>
-  <h4>Des questions? Un accés direct à mon mail personnel</h4>
+<div id="student-section">
+  <h2>Vous êtes étudiants ?</h2>
+  <div>
+    <h3>Bénéficiez de 25% de réduction !</h3>
+    <h5>Pour bénéficier de l'offre, envoyez un mail à contact@exceltips.fr</h5>
+  </div>
 </div>
 <div id="who-ami">
-  <h2 class="label-title">Le prof, Thomas.</h2>
-  <h3>Mon parcous, mon cursus et pourquoi Exceltips</h3>
-  <ul>
-    <li>Ecole, stage</li>
-    <li>Ramassé en stage</li>
-    <li>Exceltips
-      <p>La vraie problématique que j'ai rencontré lorsque j'ai commencé à m'intéresser à Excel c'est la densité d'information disponible sur Internet</p>
-      <p>Des blogs, des vidéos ou encore d'autre formation.. Il m'a fallu des heures et des heures pour commencer à peine me débrouiller sur Excel</p>
-      <p>Et après quelques mois, je me suis rendu compte que je réalisais toutes les tâches qui m'étaient demandées avec 20% de ce que j'ai pu apprendre</p>
-      <p>Alors </p>
-    </li>
-  </ul>
+  <h2 class="label-title">Le prof, <span class="label-pointer">Thomas Rodier</span></h2>
+  <div id="who-ami--body">
+    <%= image_tag 'me_detoure.png', id: "avatar-home" %>
+    <div id="who-ami--description">
+      <span><i class="fas fa-caret-right"></i> <h5><strong>Contrôleur de gestion Reporting dans un groupe du CAC40</strong></h5></span>
+      <span><i class="fas fa-caret-right"></i> <h5><strong>Contrôleur de gestion R&D dans un groupe du CAC40</strong></h5></span>
+      <span><i class="fas fa-caret-right"></i> <h5><strong>Contrôleur de gestion dans une Startup</strong></h5></span>
+      <span><i class="fas fa-caret-right"></i> <h5><strong>Développeur Freelance FullStack</strong></h5></span>
+    </div>
+  </div>
+</div>
+<div id="why-exceltips">
+  <h2 class="label-title">Pourquoi avoir créé <span class="label-pointer">Exceltips ?</span></h2>
+  <span><i class="fas fa-caret-right"></i> <h5><strong>Créer une formation qui me convient</strong></h5></span>
+  <p>La vraie problématique que j'ai rencontré lorsque j'ai commencé à me documenter sur Excel, c'est le nombre incalculable d'informations que l'on peut trouver sur internet.</p>
+  <p>Et on s'y perd très facilement, on ne sait pas si c'est quelque chose d'indispensable à apprendre ou si c'est uniquement "gadget".</p>
+  <p>C'est pourquoi j'ai décidé de regrouper les formules que j'utilises tous les jours pour les partager.</p>
+  <span><i class="fas fa-caret-right"></i> <h5><strong>Avoir un bagage solide dés le début de la vie active</strong></h5></span>
+  <p>Lorsque j'ai intégré mon école de commerce, j'ai pensé avoir un bagage suffisant sur Excel pour mon premier stage.</p>
+  <p>Premier jour, la désilusion. Je n'étais même pas capable de comprendre ce que je voyais sur le fichier Excel.</p>
+  <p>C'est également pour cette raison que j'ai créé Exceltips, Excel doit être un atout dans votre vie professionnelle !</p>
+  <span><i class="fas fa-caret-right"></i> <h5><strong>Partager les connaissances que j'ai pu acquérir au plus grand nombre</strong></h5></span>
+  <p>J'ai toujours voulu transmettre et aider !</p>
+  <p>Cette formation c'est aussi un moyen pour moi de te transmettre tout ce que je peux savoir sur Excel et de t'en faire profiter.</p>
+</div>
+<div id="callback-value">
+  <h4>Une formation 100% en ligne</h4>
+  <h5>Vous avez des questions? Envoyez moi un mail à contact@exceltips.fr</h5>
 </div>
 <div id="faq-section">
-  <ul>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis blanditiis recusandae suscipit, delectus molestias, dolor voluptate ipsa adipisci expedita consequuntur odit velit aspernatur aut sit amet. Fugiat nulla repellat fuga?</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est natus, at a minima nam reprehenderit exercitationem assumenda impedit aut quidem nesciunt numquam, in quasi nihil accusantium soluta? Quasi, officia!</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, dicta, consequatur. Molestiae nisi veritatis repellat nostrum harum corrupti, error rem? Placeat ratione adipisci error reiciendis nisi, aspernatur harum dicta veritatis.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit itaque ratione vitae culpa hic quibusdam, consequatur illum ipsa tempore ex praesentium commodi, omnis repellendus, voluptatibus non nihil laudantium? Quo.</li>
-    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatem quia fugiat reprehenderit culpa quibusdam itaque. Nobis atque aut, quo vel aperiam, doloremque harum pariatur facere ea accusamus ex dolorum.</li>
-  </ul>
+  <h2 class="label-title">Questions fréquemment <span class="label-pointer">posées</span></h2>
+  <div class="card-faq">
+    <strong><h4>Jusqu'à quand ai-je accès à la formation ?</h4></strong>
+    <strong><p>La formation est accessible à vie !</p></strong>
+    <p>Vous profiterez également des nouveautés et des mises à jours de la formation. </p>
+  </div>
+  <div class="card-faq">
+    <strong><h4>Quel est le format de la formation</h4></strong>
+    <strong><p>La formation est 100% en ligne !</p></strong>
+    <p>Chaque section possède une vidéo explicative et du contenu téléchargeable</p>
+  </div>
+  <div class="card-faq">
+    <strong><h4>Quel est le profil des participants?</h4></strong>
+    <strong><p>Les participants sont principalement des personnes voyant Excel comme un problème</p></strong>
+    <p>Mais à la suite de la formation, Excel devient un atout pour votre vie professionnelle</p>
+  </div>
 </div>
 <div id="footer">
-
+  <div id="footer--body">
+    <%= image_tag 'logo_exceltips.png', class:"logo-avatar" %>
+    <%= mail_to "contact@exceltips.fr", subject: "Thomas, j'ai une question à propos d'Exceltips" do %>
+      <p><i class="fas fa-envelope"></i> Nous contacter</p>
+    <% end %>
+    <div id="footer--body--social">
+      <h6>Nous suivre sur les réseaux</h6>
+      <a href="https://www.facebook.com/exceltips.fr/"><i class="fab fa-facebook icon-footer"></i></a>
+      <a href="https://www.instagram.com/exceltips.fr/"><i class="fab fa-instagram icon-footer"></i></a>
+    </div>
+  </div>
+  <p>Fait avec <i class="fas fa-heart font-red"></i> à Paris - © 2019 - 2020 tous droits réservés Exceltips.fr</p>
 </div>
 <!-- <div class="banner-navbar">
   <%#= link_to 'Acheter la formation', new_charge_path, class: 'button-navbar active-navbar'%>

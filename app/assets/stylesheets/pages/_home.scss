@@ -1,9 +1,13 @@
-$padding-side:15rem;
+$padding-side:13%;
 
 /*-------------------------------*/
 //--------#NAVBAR HOME-----------//
 /*-------------------------------*/
 #navbar-home {
+  z-index:1;
+  position:absolute;
+  top: 0;
+  height:15vh;
   padding: 1rem $padding-side 0 $padding-side;
   color: rgb(50, 50, 40);
   width:100%;
@@ -24,20 +28,33 @@ $padding-side:15rem;
 /*-------------------------------*/
 
 #banner-home {
-  padding:0 $padding-side;
+  padding:25vh $padding-side 0 $padding-side;
   width:100%;
+  height:87vh;
   color:$e-green-three;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+  position:relative;
+  img {
+    z-index:-1;
+    position:absolute;
+    bottom:0;
+    right:2rem;
+    width:40%;
+  }
 }
 
     #banner-home--title {
-      width:50%;
-    }
-    #banner-home--img {
-      width:50%;
-      object-fit:cover;
+      width:70%;
+      h1 {
+        text-transform: uppercase;
+        font-size: 3.5rem;
+        font-weight: bolder;
+      }
+      a {
+        margin: 2rem 0;
+        width:70%;
+        text-align:center;
+        display:block;
+      }
     }
 
   /*-------------------------------*/
@@ -46,7 +63,7 @@ $padding-side:15rem;
 
 #statistic {
   color:white;
-  padding: 2rem $padding-side;
+  padding: 1rem $padding-side;
   background-color: $e-green-three;
   display:flex;
   justify-content:space-between;
@@ -61,7 +78,7 @@ $padding-side:15rem;
       }
     }
     #udemy-rating {
-      h2 {
+      h3 {
         margin-bottom: 0.5rem;
       }
       li {
@@ -105,7 +122,6 @@ $padding-side:15rem;
     padding-left: 1rem;
   }
   a {
-    font-size:1.25rem;
     margin: 2rem auto;
     width:25%;
     text-align:center;
@@ -121,19 +137,7 @@ $padding-side:15rem;
   h2, p {
     margin-bottom: 1rem;
   }
-  a {
-    display:block;
-    width:40%;
-    color:white;
-    &:hover {
-      color: white;
-    }
-  }
 }
-
-
-
-
 
 #program-exceltips {
   padding: 0 $padding-side;
@@ -141,25 +145,23 @@ $padding-side:15rem;
     margin: 1rem 0;
     list-style:none;
   }
-  a {
-    display:block;
-    text-align:center;
-    width:30%;
-    margin: 2rem auto;
-  }
+
 }
 #price-section {
   padding: 0 $padding-side;
-  span {
-    margin: 1rem 0;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
-    i {
-      margin-right: 0.5rem;
-    }
-  }
 }
+
+#student-section {
+  color:white;
+  padding: 2rem $padding-side;
+  background-color: $e-green-three;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  height:100%;
+}
+
+
 #callback-value {
   color:white;
   padding: 2rem $padding-side;
@@ -172,14 +174,271 @@ $padding-side:15rem;
 #who-ami {
   padding: 0 $padding-side;
 }
+    #who-ami--body {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+        #who-ami--description {
+          width:60%;
+          span {
+            margin: 1rem 0;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            i {
+              margin-right: 0.5rem;
+            }
+          }
+        }
+
+#why-exceltips {
+  padding: 0 $padding-side;
+  margin-bottom: 2rem;
+  span:not(:first-child) {
+    margin: 1rem 0;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}
 #faq-section {
+  margin-bottom:2rem;
   padding: 0 $padding-side;
 }
 #footer {
-  padding: 0 $padding-side;
+  padding: 2rem $padding-side;
+  background-color: $e-green-three;
+  width:100%;
+  p:last-child {
+    text-align:center;
+  }
+}
+    #footer--body {
+      display:flex;
+      justify-content:space-between;
+      align-items:start;
+    }
+
+/*------------------------------------*\
+  #RESPONSIVENESS
+\*------------------------------------*/
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  body {
+    font-size:50%;
+  }
+  #banner-home {
+    text-align:center;
+    padding: 20vh $padding-side 0 $padding-side;
+    img {
+      width:58%;
+    }
+  }
+  #banner-home--title {
+    width:100%;
+    h1 {
+      font-size: 2rem;
+    }
+    a {
+      margin: 1rem 0 0 0 ;
+      width:100%;
+    }
+  }
+  #statistic {
+    flex-direction:column;
+    align-items:center;
+  }
+  #social-proof--images {
+    grid-template-columns: 1fr;
+  }
+  #value-proposition a {
+    width:100%;
+  }
+
+  #program-exceltips {
+    .card-course {
+      flex-direction:column;
+    }
+      .card-course--right,
+      .card-course--left {
+        max-width:100%
+      }
+  }
+
+  #price-section {
+    .card-price span {
+      justify-content:center;
+    }
+    .card-price--body,
+    .card-price--footer {
+      width:100%;
+      text-align:center;
+      h6 {
+        font-size: 0.8rem;
+      }
+    }
+    .card-price--footer {
+      display:block;
+    }
+  }
+
+  #student-section {
+    padding: 1rem 10%;
+    display:block;
+    text-align:center;
+    h2, h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  #who-ami--body {
+    display:block;
+    #avatar-home {
+      width:40%;
+      display:block;
+      margin: 0 auto;
+    }
+    #who-ami--description {
+      width:100%;
+    }
+  }
+  #callback-value {
+    display:block;
+    h4, h5 {
+      text-align:center;
+      margin-bottom: 0.5rem;
+    }
+  }
+  #footer--body {
+    text-align:center;
+    display:block;
+    img {
+      display:block;
+      margin: 0 auto 0.5rem auto;
+    }
+  }
 }
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+  body {
+    font-size:50%;
+  }
+  #banner-home {
+    text-align:center;
+    padding: 20vh $padding-side 0 $padding-side;
+    img {
+      width:70%;
+    }
+  }
+  #banner-home--title {
+    width:100%;
+    h1 {
+      font-size: 2rem;
+    }
+    a {
+      margin: 1rem 0 0 0 ;
+      width:100%;
+    }
+  }
+  #statistic {
+    flex-direction:column;
+    align-items:center;
+  }
+  #social-proof--images {
+    grid-template-columns: 1fr;
+  }
+  #value-proposition a {
+    width:100%;
+  }
 
-/*-------------------------------*/
-//---------#SOCIAL PROOF---------//
-/*-------------------------------*/
+  #program-exceltips {
+    .card-course {
+      flex-direction:column;
+    }
+      .card-course--right,
+      .card-course--left {
+        max-width:100%
+      }
+  }
+
+  #price-section {
+    .card-price span {
+      justify-content:center;
+    }
+    .card-price--body,
+    .card-price--footer {
+      width:100%;
+      text-align:center;
+      h6 {
+        font-size: 0.8rem;
+      }
+    }
+    .card-price--footer {
+      display:block;
+    }
+  }
+
+  #student-section {
+    padding: 1rem 10%;
+    display:block;
+    text-align:center;
+    h2, h3 {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  #who-ami--body {
+    display:block;
+    #avatar-home {
+      width:40%;
+      display:block;
+      margin: 0 auto;
+    }
+    #who-ami--description {
+      width:100%;
+    }
+  }
+  #callback-value {
+    display:block;
+    h4, h5 {
+      text-align:center;
+      margin-bottom: 0.5rem;
+    }
+  }
+  #footer--body {
+    text-align:center;
+    display:block;
+    img {
+      display:block;
+      margin: 0 auto 0.5rem auto;
+    }
+  }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  $padding-side:1rem;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+  $padding-side:1rem;
+  #banner-home {
+    img {
+      width:70%;
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
+
+}
