@@ -1,11 +1,20 @@
-// FIRST DASHBOARD
+/*-------------------------------*/
+//-------#FIRST DASHBOARD--------//
+/*-------------------------------*/
 
 .dashboard-one {
   height: 100vh;
   width: 359px;
-  position:sticky;
+  position:fixed;
+  z-index:1;
   top:0;
   background-color: $e-green-three;
+}
+.dashboard-one:hover {
+    width:359px;
+    .text-link {
+      display:block;
+    }
 }
 
 .progression-circle {
@@ -32,8 +41,8 @@
 .box {
   max-width: 360px;
   max-height: 80px;
-  padding: 5% 0% 5% 20%;
-  margin: 10% auto;
+  padding: 1rem 0 1rem 2rem;
+  margin: 2rem auto;
   display:grid;
   grid-template-columns: 15% 70%;
   grid-gap: 20px;
@@ -48,16 +57,10 @@
   p {
     margin: auto 0px;
   }
-  .fa-book-open {
-    font-size:24px;
-    line-height: unset !important;
-  }
-  .fa-user-graduate {
-    font-size:24px;
-    line-height: unset !important;
-  }
+  .fa-book-open,
   .fa-sign-out-alt {
-    font-size:24px;
+    font-size:30px;
+    margin: 0 auto;
     line-height: unset !important;
   }
 }
@@ -68,8 +71,10 @@
   border-right: 7px solid $e-green-six;
 }
 
+/*-------------------------------*/
+//-------#SECOND DASHBOARD-------//
+/*-------------------------------*/
 
-// SECOND DASHBOARD
 
 .dashboard-two {
   height: 94vh;
@@ -80,7 +85,143 @@
 }
 
 .navigation-box {
-  width: 359px;
+  max-width: 359px;
+  width:100%;
   height: 78%;
   overflow-y: scroll;
+}
+
+
+// .dashboard-one {
+//   height: 100vh;
+//   width: 359px;
+//   position:sticky;
+//   top:0;
+//   background-color: $e-green-three;
+// }
+
+// .progression-circle {
+//   img {
+//     display:block;
+//     margin: 0.5rem auto;
+//   }
+//   .progress {
+//     margin: 0.5rem auto;
+//     width: 50%;
+//   }
+//   .progress-bar {
+//     background-color: rgba($orange, 0.7);
+//     box-shadow:$box-shadow;
+//     &.complete {
+//       background-color: $green;
+//     }
+//   }
+
+// }
+
+
+
+// .box {
+//   max-width: 360px;
+//   max-height: 80px;
+//   padding: 5% 0% 5% 20%;
+//   margin: 10% auto;
+//   display:grid;
+//   grid-template-columns: 15% 70%;
+//   grid-gap: 20px;
+//   border-radius: 10px;
+//   border-right: 7px solid $e-green-three;
+//   &:hover:not(.active-dashboard) {
+//   background-color: $e-green-two;
+//   border-right: 7px solid $e-green-two;
+//   opacity: 0.8;
+//   cursor:pointer;
+//   }
+//   p {
+//     margin: auto 0px;
+//   }
+//   .fa-book-open {
+//     font-size:24px;
+//     line-height: unset !important;
+//   }
+//   .fa-user-graduate {
+//     font-size:24px;
+//     line-height: unset !important;
+//   }
+//   .fa-sign-out-alt {
+//     font-size:24px;
+//     line-height: unset !important;
+//   }
+// }
+
+// .active-dashboard {
+//   background-color: $e-green-two;
+//   opacity: 0.9;
+//   border-right: 7px solid $e-green-six;
+// }
+
+// /*-------------------------------*/
+// //-------#SECOND DASHBOARD-------//
+// /*-------------------------------*/
+
+
+// .dashboard-two {
+//   height: 94vh;
+//   width: 359px;
+//   position:sticky;
+//   top:0;
+//   background-color: $e-green-three;
+// }
+
+// .navigation-box {
+//   max-width: 359px;
+//   width:100%;
+//   height: 78%;
+//   overflow-y: scroll;
+// }
+
+
+/*-------------------------------*/
+//--------#RESPONSIVENESS--------//
+/*-------------------------------*/
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .dashboard-one {
+    width:150px;
+    transition: all 0.3s ease-in-out;
+  }
+  .text-link {
+    display:none;
+  }
+  .box {
+    grid-template-columns: 50% 50%;
+  }
+  .fa-book-open,
+  .fa-sign-out-alt {
+    font-size:30px;
+    line-height: unset !important;
+  }
+  .dashboard-one:hover {
+      width:359px;
+      .text-link {
+        display:block;
+      }
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
 }

@@ -6,7 +6,7 @@
       </div>
     <% end %>
     <label class="amount">
-      <span>Amount: $50.00</span>
+      <span>Montant 50€</span>
     </label>
   </article>
 
@@ -14,5 +14,7 @@
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Formation Exceltips"
           data-amount="5000"
-          data-locale="auto"></script>
+          data-locale="auto">
+
+          </script>
 <% end %>

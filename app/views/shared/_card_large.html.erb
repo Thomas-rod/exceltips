@@ -1,5 +1,9 @@
 <div class="card-large <%= progression.status_visited_card %>">
-  <img src="https://picsum.photos/seed/picsum/180/120" alt="">
+  <% if progression.course.cover.nil? || progression.course.cover.empty? || progression.course.cover == ""%>
+    <img src="https://picsum.photos/seed/picsum/180/120" alt="">
+  <% else %>
+    <%= image_tag progression.course.cover %>
+  <% end %>
   <div class="inside-card-large">
     <h6><%= progression.course.title %></h6>
     <p><%= progression.course.description %></p>

@@ -3,14 +3,14 @@
   <% if user_signed_in? %>
     <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
   <% else %>
-    <%= link_to 'Acheter', new_user_session_path, class: 'button-navbar' %>
+    <%= link_to 'Acheter', "#", data: {toggle: "modal", target: "#priceModal"}, class: 'button-navbar' %>
   <% end %>
 </nav>
 <div id="banner-home">
   <div id="banner-home--title">
     <h1>2 heures pour maîtriser Excel</h1>
     <h3>C'est tout ce qu'il vous faut.</h3>
-    <a href="#" class="button-navbar">Rejoindre la formation</a>
+    <%= link_to "Rejoindre la formation", "#",class:"button-navbar", data: {toggle: "modal", target: "#priceModal"} %>
   </div>
   <%= image_tag "detour_me_two.png" %>
 </div>
@@ -60,7 +60,7 @@
   <h4><i class="fas fa-caret-right"></i> Qui vous a dit qu'il fallait des années ?</h4>
   <p>Deux heures, c'est ce qu'il vous faut avec Exceltips pour devenir productif sur Excel</p>
   <p>Fini les formations interminables pour un résultat incertain</p>
-  <a href="" class="button-navbar">Passer à Exceltips </a>
+  <%= link_to "Passer à Exceltips", "#", class:"button-navbar", data: {toggle: "modal", target: "#priceModal"} %>
 </div>
 <div id="kind-student">
   <h2>Excel ne doit plus être un frein dans votre vie professionnelle</h2>
@@ -133,7 +133,7 @@
       <span id="label-price"><h2>50€</h2><h4>ttc</h4></span>
       <div>
         <h3>Satisfait ou remboursé</h3>
-        <a href="" class="button-navbar">Me former avec Exceltips</a>
+        <%= link_to "Me former avec Exceltips", "#", class:"button-navbar", data: {toggle: "modal", target: "#priceModal"} %>
       </div>
     </div>
   </div>
@@ -206,6 +206,47 @@
     </div>
   </div>
   <p>Fait avec <i class="fas fa-heart font-red"></i> à Paris - © 2019 - 2020 tous droits réservés Exceltips.fr</p>
+</div>
+<!-- MODAL -->
+<div class="modal" id="priceModal"tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>La formation Exceltips c'est un premier pas vers l'apprentissage d'Excel</p>
+        <strong><p class="label-pointer">Alors, n'hésite plus ... DO IT !</p></strong>
+        <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+            <label class="amount">
+            </label>
+          </article>
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="Formation Exceltips"
+                  data-amount="5000"
+                  data-locale="auto">
+
+                  </script>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <i class="fab fa-cc-stripe icon-checkout"></i>
+        <i class="fab fa-cc-visa icon-checkout"></i>
+        <i class="fab fa-cc-mastercard icon-checkout"></i>
+        <i class="fas fa-shield-alt icon-checkout"></i>
+        <strong><h5>Paiement sécurisé via Stripe</h5></strong>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- <div class="banner-navbar">
   <%#= link_to 'Acheter la formation', new_charge_path, class: 'button-navbar active-navbar'%>

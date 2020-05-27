@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :courses
 
   validates :first_name, :email, presence: { not_blank: 'Les champs sont vides... Applique toi !' }
-  validates :email, :slug, uniqueness: true
+  validates :email, uniqueness: true
   after_create :create_progression
 
 
@@ -21,6 +21,9 @@ class User < ApplicationRecord
     end
   end
 
+  def check_stripe_customer
+
+  end
 
 
 
