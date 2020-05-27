@@ -1,15 +1,171 @@
-<div id="navbar-home">
-  <div id="navbar-logo">
-  <%=image_tag "logo_exceltips.png", class: 'logo-avatar' %>
+<nav id="navbar-home">
+  <%= image_tag "logo_exceltips.png", class:"logo-avatar" %>
+  <% if user_signed_in? %>
+    <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
+  <% else %>
+    <%= link_to 'Acheter', new_user_session_path, class: 'button-navbar' %>
+  <% end %>
+</nav>
+<div id="banner-home">
+  <div id="banner-home--title">
+    <h1>2 heures pour maîtriser Excel</h1>
+    <h3>Apprendre l'essentiel, c'est tout ce qu'il vous faut.</h3>
   </div>
-  <div id="navbar-button">
-    <% if user_signed_in? %>
-      <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
-    <% else %>
-      <%= link_to 'Se connecter', new_user_session_path, class: 'button-navbar' %>
-    <% end %>
+  <div id="banner-home--img">
+    <%#= image_tag "me_detoure.png" %>
   </div>
 </div>
-<div class="banner-navbar">
-  <%= link_to 'Acheter la formation', new_charge_path, class: 'button-navbar active-navbar'%>
+<div id="statistic">
+  <div id="udemy-subscriptions">
+    <h2>+1000 inscriptions sur</h2>
+    <%= image_tag 'udemy_logo.svg' %>
+  </div>
+  <div id="udemy-rating">
+    <h2>Noté 4.5 sur 5</h2>
+    <ul>
+      <li class="star-rating"><i class="fas fa-star"></i></li>
+      <li class="star-rating"><i class="fas fa-star"></i></li>
+      <li class="star-rating"><i class="fas fa-star"></i></li>
+      <li class="star-rating"><i class="fas fa-star"></i></li>
+      <li class="star-rating"><i class="fas fa-star-half-alt"></i></li>
+    </ul>
+    <p>sur plus de 70 avis</p>
+  </div>
 </div>
+<div id="social-proof">
+  <h2 class="label-title">Ce que <span class="label-pointer">les élèves</span> en disent</h2>
+  <div id="social-proof--images">
+    <%= image_tag 'feedback-one.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-two.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-three.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-four.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-five.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-six.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-seven.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-eigth.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-nine.png', class:"img-feedback" %>
+    <%= image_tag 'feedback-ten.png', class:"img-feedback" %>
+  </div>
+</div>
+<div id="value-proposition">
+  <h2 class="label-title">Pourquoi choisir <span class="label-pointer">Exceltips ?</span></h2>
+  <h4><i class="fas fa-caret-right"></i> L'assurance d'apprendre uniquement l'essentiel</h4>
+  <p>90% des vos tâches peuvent être réalisées avec quelques formules Excel</p>
+  <p>Avec la formation Exceltips, vous allez maîtriser ces formules !</p>
+  <h4><i class="fas fa-caret-right"></i> Une formation en 100% en ligne</h4>
+  <p>Un espace personnel dédié où vous allez pouvoir poser vos questions et échanger avec les étudiants Exceltips</p>
+  <p>Profitez d'être dans le train, dans les transports en communs pour vous améliorer sur Excel</p>
+  <h4><i class="fas fa-caret-right"></i> Un apprentissage adapté à tous</h4>
+  <p>Des fiches, ebook, exercices à télécharger et réaliser chez vous !</p>
+  <p>Vous préférez le format vidéo ? Cela tombe bien, c'est inclus !</p>
+  <h4><i class="fas fa-caret-right"></i> Qui vous a dit qu'il fallait des années ?</h4>
+  <p>Deux heures, c'est ce qu'il vous faut avec Exceltips pour devenir productif sur Excel</p>
+  <p>Fini les formations interminables pour un résultat incertain</p>
+  <a href="" class="button-navbar">Passer à Exceltips </a>
+</div>
+<div id="kind-student">
+  <h2>Excel ne doit plus être un frein dans votre vie professionnelle</h2>
+  <p>Si rien que le mot Excel vous fait frémir, que vous ne vous sentez pas à l'aise avec Excel ou que vous ne savez pas comment fonctionne une RechercheV</p>
+  <strong><a href=""><h6>La formation Exceltips est faite pour vous</h6></a></strong>
+</div>
+<div id="program-exceltips">
+  <h2 class="label-title">Quel est <span class="label-pointer">le programme</span> de la formation Exceltips ?</h2>
+  <h4>L'essentiel, rien d'autre.</h4>
+  <ul>
+    <li>
+      <div class="card-course">
+        <div class="card-course--left">
+          <h4> Partie 1</h4>
+          <h4>Les essentiels du Texte</h4>
+        </div>
+        <div class="card-course--right">
+          <p><i class="far fa-check-circle"></i> Apprentissage des formules texte indispensable à maîtriser</p>
+          <p><i class="far fa-check-circle"></i> Des vidéos explicatives</p>
+          <p><i class="far fa-check-circle"></i> Des fiches à télécharger</p>
+          <p><i class="far fa-check-circle"></i> Des exercices corrigés à réaliser</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-course">
+        <div class="card-course--left">
+          <h4> Partie 2</h4>
+          <h4>Les essentiels business</h4>
+        </div>
+        <div class="card-course--right">
+          <p><i class="far fa-check-circle"></i> Apprentissage des formules business indispensable à maîtriser</p>
+          <p><i class="far fa-check-circle"></i> Des vidéos explicatives</p>
+          <p><i class="far fa-check-circle"></i> Des fiches à télécharger</p>
+          <p><i class="far fa-check-circle"></i> Des exercices corrigés à réaliser</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card-course">
+        <div class="card-course--left">
+          <h4> Partie 3</h4>
+          <h4>Créer ses propres fichiers</h4>
+        </div>
+        <div class="card-course--right">
+          <p><i class="far fa-check-circle"></i> Mettre en pratique les formules apprises pour automatiser ses propres fichiers</p>
+          <p><i class="far fa-check-circle"></i> Des templates de tâches déjà automatisés</p>
+          <p><i class="far fa-check-circle"></i> Des fiches explicatives</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <a href="" class="button-navbar">Me former avec Exceltips</a>
+</div>
+<div id="price-section">
+  <h2 class="label-title">Prix</h2>
+  <div class="card-price">
+    <div class="card-price--body">
+      <div class="card-price--column">
+        <span><i class="fas fa-caret-right"></i> <h6><strong>+15 vidéos explicatives</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>Avant première aux nouveaux cours</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>Accès à vie</strong></h6></span>
+      </div>
+      <div class="card-price--column">
+        <span><i class="fas fa-caret-right"></i><h6><strong>Ebook +60 pages</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>+15 fiches téléchargeables</strong></h6></span>
+        <span><i class="fas fa-caret-right"></i><h6><strong>+15 exercices à réaliser</strong></h6></span>
+      </div>
+    </div>
+    <h3 id="label-price">50€</h3>
+  </div>
+</div>
+<div id="callback-value">
+  <h4>100% en ligne</h4>
+  <h4>Des questions? Un accés direct à mon mail personnel</h4>
+</div>
+<div id="who-ami">
+  <h2 class="label-title">Le prof, Thomas.</h2>
+  <h3>Mon parcous, mon cursus et pourquoi Exceltips</h3>
+  <ul>
+    <li>Ecole, stage</li>
+    <li>Ramassé en stage</li>
+    <li>Exceltips
+      <p>La vraie problématique que j'ai rencontré lorsque j'ai commencé à m'intéresser à Excel c'est la densité d'information disponible sur Internet</p>
+      <p>Des blogs, des vidéos ou encore d'autre formation.. Il m'a fallu des heures et des heures pour commencer à peine me débrouiller sur Excel</p>
+      <p>Et après quelques mois, je me suis rendu compte que je réalisais toutes les tâches qui m'étaient demandées avec 20% de ce que j'ai pu apprendre</p>
+      <p>Alors </p>
+    </li>
+  </ul>
+</div>
+<div id="faq-section">
+  <ul>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis blanditiis recusandae suscipit, delectus molestias, dolor voluptate ipsa adipisci expedita consequuntur odit velit aspernatur aut sit amet. Fugiat nulla repellat fuga?</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates est natus, at a minima nam reprehenderit exercitationem assumenda impedit aut quidem nesciunt numquam, in quasi nihil accusantium soluta? Quasi, officia!</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, dicta, consequatur. Molestiae nisi veritatis repellat nostrum harum corrupti, error rem? Placeat ratione adipisci error reiciendis nisi, aspernatur harum dicta veritatis.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet fugit itaque ratione vitae culpa hic quibusdam, consequatur illum ipsa tempore ex praesentium commodi, omnis repellendus, voluptatibus non nihil laudantium? Quo.</li>
+    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem voluptatem quia fugiat reprehenderit culpa quibusdam itaque. Nobis atque aut, quo vel aperiam, doloremque harum pariatur facere ea accusamus ex dolorum.</li>
+  </ul>
+</div>
+<div id="footer">
+
+</div>
+<!-- <div class="banner-navbar">
+  <%#= link_to 'Acheter la formation', new_charge_path, class: 'button-navbar active-navbar'%>
+</div> -->
+
+

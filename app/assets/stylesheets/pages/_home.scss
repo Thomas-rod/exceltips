@@ -1,13 +1,185 @@
+$padding-side:15rem;
+
+/*-------------------------------*/
+//--------#NAVBAR HOME-----------//
+/*-------------------------------*/
 #navbar-home {
+  padding: 1rem $padding-side 0 $padding-side;
+  color: rgb(50, 50, 40);
+  width:100%;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-#navbar-logo {
-  padding: 10px 0px 0px 10px;
-}
-#navbar-button {
-  padding: 10px 20px;
+    #navbar-logo {
+      padding: 10px 0px 0px 0px;
+    }
+    #navbar-button {
+      padding: 10px 20px;
+    }
 
+/*-------------------------------*/
+//---------#BANNER HOME----------//
+/*-------------------------------*/
+
+#banner-home {
+  padding:0 $padding-side;
+  width:100%;
+  color:$e-green-three;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
 }
+
+    #banner-home--title {
+      width:50%;
+    }
+    #banner-home--img {
+      width:50%;
+      object-fit:cover;
+    }
+
+  /*-------------------------------*/
+  //----------#STATISTIC-----------//
+  /*-------------------------------*/
+
+#statistic {
+  color:white;
+  padding: 2rem $padding-side;
+  background-color: $e-green-three;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  height:100%;
+}
+
+    #udemy-subscriptions {
+      img {
+        display:block;
+        margin: 0 auto;
+      }
+    }
+    #udemy-rating {
+      h2 {
+        margin-bottom: 0.5rem;
+      }
+      li {
+        list-style:none;
+        display:inline;
+        font-size: 2rem;
+        color: $yellow;
+      }
+    }
+
+  /*-------------------------------*/
+  //---------#SOCIAL PROOF---------//
+  /*-------------------------------*/
+
+#social-proof {
+  padding: 0 $padding-side;
+}
+
+    #social-proof--images {
+      width:100%;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap:1rem;
+    }
+      .img-feedback {
+        width:100%;
+        border-radius:5px;
+        box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+      }
+
+  /*-------------------------------*/
+  //---------#SOCIAL PROOF---------//
+  /*-------------------------------*/
+
+#value-proposition {
+  padding: 0 $padding-side;
+  h4 {
+    margin: 2rem 0 1rem 0;
+  }
+  p {
+    padding-left: 1rem;
+  }
+  a {
+    font-size:1.25rem;
+    margin: 2rem auto;
+    width:25%;
+    text-align:center;
+    display:block;
+  }
+}
+#kind-student {
+  color:white;
+  padding: 2rem $padding-side;
+  background-color: $e-green-three;
+  align-items:start;
+  height:100%;
+  h2, p {
+    margin-bottom: 1rem;
+  }
+  a {
+    display:block;
+    width:40%;
+    color:white;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+
+
+
+#program-exceltips {
+  padding: 0 $padding-side;
+  li {
+    margin: 1rem 0;
+    list-style:none;
+  }
+  a {
+    display:block;
+    text-align:center;
+    width:30%;
+    margin: 2rem auto;
+  }
+}
+#price-section {
+  padding: 0 $padding-side;
+  span {
+    margin: 1rem 0;
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}
+#callback-value {
+  color:white;
+  padding: 2rem $padding-side;
+  background-color: $e-green-three;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  height:100%;
+}
+#who-ami {
+  padding: 0 $padding-side;
+}
+#faq-section {
+  padding: 0 $padding-side;
+}
+#footer {
+  padding: 0 $padding-side;
+}
+
+
+/*-------------------------------*/
+//---------#SOCIAL PROOF---------//
+/*-------------------------------*/

@@ -16,7 +16,9 @@ a {
 .wrapper-global {
   display: flex;
 }
-
+ul, li {
+  padding-left:0px;
+}
 button {
   all: unset;
 }

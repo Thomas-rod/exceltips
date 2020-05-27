@@ -1,22 +1,23 @@
 .button-navbar {
   padding: 10px 20px;
-  // background-color:green;
-  border: 1px solid $e-green-one;
-  color: $e-green-one;
+  background-color:$e-green-three;
+  color: white;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
   &:hover {
-    transition: 0.2s;
-    border: 1px solid $e-green-one;
+    transform: translateY(-2px);
+    box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.2);
     color: white;
     background-color: $e-green-one;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 }
 
 .active-navbar {
 background-color: $e-green-one;
-border-radius:15px;
+border-radius:5px;
 color:white;
 font-weight:bold;
 &:hover {
@@ -24,6 +25,6 @@ font-weight:bold;
     border: 1px solid $e-green-one;
     color: $e-green-one;
     background-color: white;
-    border-radius: 15px;
+    border-radius: 5px;
   }
 }
