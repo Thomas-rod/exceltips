@@ -1,6 +1,6 @@
 .container-courses {
-  margin: 30px 400px;
-  width: 80%;
+  margin: 2rem 0 0 400px;
+  width: 100%;
 }
 
 .section-courses {
@@ -9,4 +9,110 @@
   h3 {
     margin-bottom: 1%;
   }
+}
+
+/*-------------------------------*/
+//--------#RESPONSIVENESS--------//
+/*-------------------------------*/
+
+@media only screen and (max-width: 400px) {
+  .container-courses {
+    margin: 1rem 1rem 10vh 1rem;
+  }
+  .card-large {
+    width:100%;
+    grid-template-columns: 25% 50% 10%;
+  }
+  .dashboard-one {
+    bottom: 0;
+    display:flex;
+    width:100vw;
+    height:10vh;
+    .progression-circle {
+      display:none;
+    }
+    .navigation-box {
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      height:100%;
+      width:100%;
+      p {
+        display:none
+      }
+      .active-dashboard {
+        background-color: $e-green-three;
+        opacity: 0.9;
+        border-right: 0px;
+      }
+    }
+  }
+
+  .box {
+    display:flex;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+  .container-courses {
+      margin: 1rem 1rem 10vh 1rem;
+    }
+    .card-large {
+      width:100%;
+      grid-template-columns: 25% 50% 10%;
+    }
+    .dashboard-one {
+      bottom: 0;
+      display:flex;
+      width:100vw;
+      height:10vh;
+      .progression-circle {
+        display:none;
+      }
+      .navigation-box {
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        height:100%;
+        width:100%;
+        p {
+          display:none
+        }
+        .active-dashboard {
+          background-color: $e-green-three;
+          opacity: 0.9;
+          border-right: 0px;
+        }
+      }
+    }
+
+    .box {
+      display:flex;
+      max-width: 100%;
+      max-height: 100%;
+      padding: 0;
+      margin: 0;
+      border-radius: 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
+
 }

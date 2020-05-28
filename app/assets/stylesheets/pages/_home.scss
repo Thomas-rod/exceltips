@@ -16,12 +16,11 @@ $padding-side:13%;
   align-items:center;
 }
 
-    #navbar-logo {
-      padding: 10px 0px 0px 0px;
-    }
-    #navbar-button {
-      padding: 10px 20px;
-    }
+#devise-button {
+width:40%;
+  display:flex;
+  justify-content:space-between;
+}
 
 /*-------------------------------*/
 //---------#BANNER HOME----------//
@@ -267,6 +266,12 @@ $padding-side:13%;
   body {
     font-size:50%;
   }
+
+  .not-active-link-home {
+    margin: 0rem 0rem 1rem 0rem;
+    flex-direction:column;
+    display:block;
+  }
   #banner-home {
     text-align:center;
     padding: 20vh $padding-side 0 $padding-side;
@@ -363,6 +368,11 @@ $padding-side:13%;
 @media only screen and (max-width: 768px) and (min-width: 400px){
   body {
     font-size:50%;
+  }
+  .not-active-link-home {
+    margin: 0rem 0rem 1rem 0rem;
+    flex-direction:column;
+    display:block;
   }
   #banner-home {
     text-align:center;

@@ -29,6 +29,18 @@ font-weight:bold;
   }
 }
 
+
+
 .not-active-link {
   font-size: 0.9rem;
+}
+
+.not-active-link-home {
+  font-size: 1rem;
+  color: $e-green-three;
+  font-weight:bold;
+  margin-right: 1rem;
+  &:hover {
+    color: $e-green-two;
+  }
 }

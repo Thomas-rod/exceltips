@@ -5,8 +5,6 @@ class ChargesController < ApplicationController
   end
 
   def create
-    redirect_to new_user_registration_path
-
     @amount = 5000
 
     customer = Stripe::Customer.create(

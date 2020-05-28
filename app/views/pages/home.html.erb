@@ -1,10 +1,13 @@
 <nav id="navbar-home">
   <%= image_tag "logo_exceltips.png", class:"logo-avatar" %>
-  <% if user_signed_in? %>
-    <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
-  <% else %>
-    <%= link_to 'Acheter', "#", data: {toggle: "modal", target: "#priceModal"}, class: 'button-navbar' %>
-  <% end %>
+  <div class="devise-button">
+    <% if user_signed_in? %>
+      <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
+    <% else %>
+      <%= link_to 'Se connecter', new_user_session_path, class: 'not-active-link-home' %>
+      <%= link_to 'Acheter', "#", data: {toggle: "modal", target: "#priceModal"}, class: 'button-navbar' %>
+    <% end %>
+  </div>
 </nav>
 <div id="banner-home">
   <div id="banner-home--title">

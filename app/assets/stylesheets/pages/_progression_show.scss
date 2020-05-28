@@ -6,8 +6,9 @@
 #display-progression {
   padding: 1%;
   width:100%;
-  height:94vh;
-  overflow-y:auto;
+  height:100vh;
+
+  margin: 48px 0 0 359px;
 }
 
 /*-------------------------------*/
@@ -88,11 +89,12 @@
 
 // VIDEO
 .video-youtube {
-  margin: 0px 90px;
+  margin: 0px auto;
   width:80%;
   min-height:60vh;
   border-radius: 15px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  display:block;
 }
 
 .coming-soon {
@@ -101,5 +103,219 @@
     color: $e-green-three;
     font-weight:bold;
   }
+}
 
+/*-------------------------------*/
+//--------#RESPONSIVENESS--------//
+/*-------------------------------*/
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 50.5%;
+  }
+  .dashboard-two {
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    .progression-circle {
+      display:none;
+    }
+    .navigation-box {
+      display:flex;
+      overflow-x:scroll;
+      align-items:center;
+      height:100%;
+      a {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+  .card-small {
+    grid-template-columns: minmax(40px, 20%) minmax(120px, 70%);
+    align-items:center;
+    grid-gap: 0px;
+    padding: 0.5rem;
+  }
+  .inside-card-small{
+    white-space: nowrap;
+    overflow: hidden;
+    p {
+      text-overflow: ellipsis;
+    }
+  }
+
+
+  .navbar-colorize:first-child {
+    display:none;
+  }
+  .navbar-colorize:not(:first-child) {
+    p {
+      // font-size: 0.8rem;
+    }
+  }
+  #display-progression {
+    height:100%;
+    margin: calc(1rem + 48px) 1rem 15vh 1rem;
+  }
+  .grid-transform {
+    height:100%;
+    line-height:1rem;
+  }
+  #second-column, #third-column {
+    justify-content:flex-start;
+    padding-right: 0px;
+    padding-left: 0px;
+    .fa-chevron-circle-left {
+      padding-right: 0.5rem;
+    }
+    .fa-chevron-circle-right {
+      padding-left: 0.5rem;
+    }
+  }
+  .grid-navbar-three {
+    grid-template-columns: 50% 50%;
+  }
+
+  #progression-header {
+    flex-wrap:wrap;
+    justify-content:space-around;
+    h5 {
+      font-size: 1.1rem;
+      width:80%;
+    }
+    .label {
+      text-align:center;
+      width:20%;
+    }
+    .progression-doc {
+      margin-top: 1rem;
+      width:100%;
+    }
+  }
+  .add-comment-section {
+    width:90%;
+    margin:1rem;
+  }
+  .card-comment {
+    margin-left: 0px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) and (min-width: 400px){
+  body {
+    font-size: 50.5%;
+  }
+  .dashboard-two {
+    bottom: 0;
+    display: flex;
+    width: 100vw;
+    height: 15vh;
+    .progression-circle {
+      display:none;
+    }
+    .navigation-box {
+      display:flex;
+      overflow-x:scroll;
+      align-items:center;
+      height:100%;
+      a {
+        margin: 0 0.5rem;
+      }
+    }
+  }
+  .card-small {
+    grid-template-columns: minmax(40px, 20%) minmax(120px, 70%);
+    align-items:center;
+    grid-gap: 0px;
+    padding: 0.5rem;
+  }
+  .inside-card-small{
+    white-space: nowrap;
+    overflow: hidden;
+    p {
+      text-overflow: ellipsis;
+    }
+  }
+
+
+  .navbar-colorize:first-child {
+    display:none;
+  }
+  .navbar-colorize:not(:first-child) {
+    p {
+      // font-size: 0.8rem;
+    }
+  }
+  #display-progression {
+    margin-bottom:15vh;
+    margin: 1rem;
+  }
+  .grid-transform {
+    height:100%;
+    line-height:1rem;
+  }
+  #second-column, #third-column {
+    justify-content:flex-start;
+    padding-right: 0px;
+    padding-left: 0px;
+    .fa-chevron-circle-left {
+      padding-right: 0.5rem;
+    }
+    .fa-chevron-circle-right {
+      padding-left: 0.5rem;
+    }
+  }
+  .grid-navbar-three {
+    grid-template-columns: 50% 50%;
+  }
+
+  #progression-header {
+    flex-wrap:wrap;
+    justify-content:space-around;
+    h5 {
+      font-size: 1.1rem;
+      width:80%;
+    }
+    .label {
+      text-align:center;
+      width:20%;
+    }
+    .progression-doc {
+      margin-top: 1rem;
+      width:100%;
+    }
+  }
+  .add-comment-section {
+    width:90%;
+    margin:1rem;
+  }
+  .card-comment {
+    margin-left: 0px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  .dashboard-two {
+    left:0px;
+    top: 48px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and  (max-width: 1100px) and (min-width: 992px){
+  .dashboard-two {
+    left:0px;
+    top: 48px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1100px) {
+  .dashboard-two {
+    left:0px;
+    top: 48px;
+  }
 }
