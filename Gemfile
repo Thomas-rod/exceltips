@@ -35,7 +35,7 @@ gem 'devise'
 # MoneyRails to deal with money in my app
 gem 'money-rails', '~>1.12'
 # Stripe for payments
-gem 'stripe'
+gem 'stripe', '~> 5.22'
 # Add Jquery for JS
 gem 'jquery-rails'
 # Add cloudinary for courses vidéos

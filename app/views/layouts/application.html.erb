@@ -2,18 +2,16 @@
 <html>
   <head>
     <title>Exceltips</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139905266-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    <!-- END GOOGLE ANALYTICS -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <% if Rails.env.production? %>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139905266-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-      </script>
-    <% end %>
-    <!-- END GOOGLE ANALYTICS -->
     <!-- META TAGS -->
     <title><%= meta_title %></title>
     <meta name="description" content="<%= meta_description %>">
