@@ -1,1 +1,18 @@
-<%= render partial: 'shared/form_sendinblue' %>
+<nav id="navbar-home">
+  <%= link_to root_path do %>
+      <%= image_tag "logo_exceltips.png", class:"logo-avatar" %>
+    <% end %>
+  <div class="devise-button">
+    <%= link_to 'Newsletter 📫', newtips_path, class:"not-active-link-home" %>
+    <% if user_signed_in? %>
+      <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
+    <% else %>
+      <%= link_to 'Se connecter', new_user_session_path, class: 'not-active-link-home' %>
+      <%= link_to 'Acheter', "#", data: {toggle: "modal", target: "#priceModal"}, class: 'button-navbar' %>
+    <% end %>
+  </div>
+</nav>
+<div id="header-newtips">
+  <h2>Vous souhaitez recevoir un tips tous les jours sur votre boîte mail ?</h2>
+  <%= render partial: "shared/form_sendinblue_full_page" %>
+</div>

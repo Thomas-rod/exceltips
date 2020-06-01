@@ -1,9 +1,9 @@
-<div class="promotional-banner-one">
-  <h2>Pour célébrez la création de la plateforme Exceltips, <span>ÉCONOMISEZ -25%</span></h2>
-</div>
 <nav id="navbar-home">
-  <%= image_tag "logo_exceltips.png", class:"logo-avatar" %>
+  <%= link_to root_path do %>
+    <%= image_tag "logo_exceltips.png", class:"logo-avatar" %>
+  <% end %>
   <div class="devise-button">
+    <%= link_to 'Newsletter 📫', newtips_path, class:"not-active-link-home" %>
     <% if user_signed_in? %>
       <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
     <% else %>
@@ -258,5 +258,8 @@
   </div>
 </div>
 <div id="popup-leaving" tabindex="-1">
-  <%= render partial: "shared/form_sendinblue" %>
+  <%= render partial: "shared/form_sendinblue_popup" %>
+</div>
+<div class="promotional-banner-one">
+  <h2>Pour célébrez la création de la plateforme Exceltips, <span>ÉCONOMISEZ -25%</span></h2>
 </div>
