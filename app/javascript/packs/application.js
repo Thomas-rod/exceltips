@@ -25,9 +25,11 @@ $(document).on("turbolinks:load", function() {
 // ----------------------------------------------------
 import "bootstrap";
 import { exitPopupLeaving } from "../components/exitpopup"
+import { closePromotionalPopup } from "../components/poppromotionclose"
 
 document.addEventListener('turbolinks:load', () => {
   exitPopupLeaving();
+  closePromotionalPopup();
 });
 
 
