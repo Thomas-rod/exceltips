@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post 'comments/', to: 'comments#create'
 
   resources :charges
+
+  get "/newtips", to: "pages#newtips"
 end

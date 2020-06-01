@@ -24,3 +24,14 @@ $(document).on("turbolinks:load", function() {
 // WRITE YOUR OWN JS STARTING FROM HERE 👇
 // ----------------------------------------------------
 import "bootstrap";
+import { exitPopupLeaving } from "../components/exitpopup"
+
+document.addEventListener('turbolinks:load', () => {
+  exitPopupLeaving();
+});
+
+
+
+
+
+// chooseSchedule();
