@@ -217,48 +217,6 @@
   <p>Fait avec <i class="fas fa-heart font-red"></i> à Paris - © 2019 - 2020 tous droits réservés Exceltips.fr</p>
 </div>
 <!-- MODAL -->
-<div class="modal" id="priceModal"tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>La formation Exceltips c'est un premier pas vers l'apprentissage d'Excel</p>
-        <strong><p class="label-pointer">Alors, n'hésite plus ... DO IT !</p></strong>
-        <script src="https://js.stripe.com/v3/"></script>
-
-        <%#= form_tag charges_path do %>
-          <!-- <article>
-            <%# if flash[:error].present? %>
-              <div id="error_explanation">
-                <p><%#= flash[:error] %></p>
-              </div>
-            <%# end %>
-            <label class="amount">
-            </label>
-          </article>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%#= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="Formation Exceltips"
-                  data-amount="3750"
-                  data-currency="EUR"
-                  data-locale="auto">
-          </script> -->
-        <%# end %>
-      </div>
-      <div class="modal-footer">
-        <i class="fab fa-cc-stripe icon-checkout"></i>
-        <i class="fab fa-cc-visa icon-checkout"></i>
-        <i class="fab fa-cc-mastercard icon-checkout"></i>
-        <i class="fas fa-shield-alt icon-checkout"></i>
-        <strong><h5>Paiement sécurisé via Stripe</h5></strong>
-      </div>
-    </div>
-  </div>
-</div>
 <div id="popup-leaving" tabindex="-1">
   <%= render partial: "shared/form_sendinblue_popup" %>
 </div>
