@@ -145,40 +145,77 @@
   /*-------------------------------*/
 
 .card-price {
-  margin: 2rem 0;
+  margin: 2rem auto;
+  padding: 1rem 7%;
+  width:50%;
   border-radius: 5px;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.2);
   align-items:center;
-  span:not(&.label-price-promo) {
-    margin: 1rem 0;
-    display:flex;
-    justify-content:flex-start;
-    align-items:center;
-    i {
-      margin-right: 0.5rem;
-    }
-  }
+  position:relative;
 }
 
-    .card-price--body,
-    .card-price--footer {
-      width:80%;
+    #label-promotion {
       display:flex;
+      justify-content:center;
       align-items:center;
-      justify-content:space-between;
-      padding: 1rem;
-      margin: 1rem auto;
+      width:30%;
+      height:30%;
+      border-radius: 50%;
+      background-color: $e-green-two;
+      box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.2);
+      position:absolute;
+      top:-10%;
+      right:-10%;
+      h5 {
+        color: white;
+        font-size: 3rem;
+        font-weight:bold;
+        margin:auto;
+      }
     }
+
+    .card-price--header {
+      text-align:center;
+      h6 {
+        font-size:2rem;
+        font-weight:bold;
+        transform: translateY(-80%);
+      }
+    }
+
+          .card-price--header--price {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            h2 {
+              font-weight:bold;
+              font-size: 8rem;
+              span {
+                font-size: 1.3rem;
+              }
+            }
+            p {
+              transform: translateY(-90%);
+              font-size: 1.2rem;
+              text-decoration: line-through;
+            }
+          }
 
     .card-price--body {
-      border-bottom: 1px solid rgba($e-green-three, 0.3);
+      h6 {margin:0.7rem 0;}
     }
-
     .card-price--footer {
+      text-align:center;
+      margin-top:1rem;
       a {
         display:block;
         text-align:center;
         margin: 2rem auto;
+      }
+      p {
+        padding: 0.5rem 0;
+        font-size:0.8rem;
+        color:$gray;
       }
     }
 

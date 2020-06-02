@@ -370,20 +370,31 @@ width:40%;
   }
 
   #price-section {
-    .card-price span {
-      justify-content:center;
-    }
-    .card-price--body,
-    .card-price--footer {
+    .card-price {
       width:100%;
-      text-align:center;
-      h6 {
-        font-size: 0.8rem;
+      span {
+        justify-content:center;
       }
     }
-    .card-price--footer {
-      display:block;
+
+    #label-promotion {
+      width:40%;
+      height:15%;
+      top:-5%;
+      h5 {
+        font-size: 2rem;
+      }
     }
+        .card-price--body,
+        .card-price--footer {
+          width:100%;
+          h6 {
+            font-size: 0.8rem;
+          }
+        }
+        .card-price--footer {
+          display:block;
+        }
   }
 
   #student-section {
@@ -480,20 +491,30 @@ width:40%;
   }
 
   #price-section {
-    .card-price span {
-      justify-content:center;
-    }
-    .card-price--body,
-    .card-price--footer {
-      width:100%;
-      text-align:center;
-      h6 {
-        font-size: 0.8rem;
+    .card-price {
+    width: 100%;
+      span {
+        justify-content:center;
       }
     }
-    .card-price--footer {
-      display:block;
+    #label-promotion {
+      width:40%;
+      height:20%;
+      top:-5%;
+      h5 {
+        font-size: 2rem;
+      }
     }
+        .card-price--body,
+        .card-price--footer {
+          width:100%;
+          h6 {
+            font-size: 0.8rem;
+          }
+        }
+        .card-price--footer {
+          display:block;
+        }
   }
 
   #student-section {
