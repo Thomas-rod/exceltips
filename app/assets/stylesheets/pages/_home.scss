@@ -48,7 +48,7 @@ width:40%;
         font-size: 3.5rem;
         font-weight: bolder;
       }
-      a {
+      button {
         margin: 2rem 0;
         width:70%;
         text-align:center;
@@ -120,7 +120,7 @@ width:40%;
   p {
     padding-left: 1rem;
   }
-  a {
+  button {
     margin: 2rem auto;
     width:25%;
     text-align:center;
@@ -339,9 +339,9 @@ width:40%;
     h1 {
       font-size: 2rem;
     }
-    a {
+    button {
       margin: 1rem 0 0 0 ;
-      width:100%;
+      width:80%;
     }
   }
   #statistic {
@@ -351,7 +351,7 @@ width:40%;
   #social-proof--images {
     grid-template-columns: 1fr;
   }
-  #value-proposition a {
+  #value-proposition button {
     width:100%;
   }
 
@@ -449,9 +449,9 @@ width:40%;
     h1 {
       font-size: 2rem;
     }
-    a {
+    button {
       margin: 1rem 0 0 0 ;
-      width:100%;
+      width:80%;
     }
   }
   #statistic {
@@ -461,7 +461,7 @@ width:40%;
   #social-proof--images {
     grid-template-columns: 1fr;
   }
-  #value-proposition a {
+  #value-proposition u {
     width:100%;
   }
 
