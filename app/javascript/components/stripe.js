@@ -1,15 +1,15 @@
 const stripeCheckout = () => {
 
-  const buttonPayment = document.getElementById('checkout-button-price_HMAiSFFV5ugOIn')
+  const buttonPayment = document.getElementById('checkout-button-price_HMAipK3IxRllNR')
   if (buttonPayment) {
     const stripe = Stripe(process.env.STRIPE_PUBLISHABLE_KEY);
 
-    const checkoutButton = document.getElementById('checkout-button-price_HMAiSFFV5ugOIn');
+    const checkoutButton = document.getElementById('checkout-button-price_HMAipK3IxRllNR');
     checkoutButton.addEventListener('click', function () {
       // When the customer clicks on the button, redirect
       // them to Checkout.
       stripe.redirectToCheckout({
-        lineItems: [{price: 'price_HMAiSFFV5ugOIn', quantity: 1}],
+        lineItems: [{price: 'price_HMAipK3IxRllNR', quantity: 1}],
         mode: 'payment',
         // Do not rely on the redirect to the successUrl for fulfilling
         // purchases, customers may not always reach the success_url after
