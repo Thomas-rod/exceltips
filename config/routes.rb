@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :charges
 
   get "/newtips", to: "pages#newtips"
+  get "/price", to: "pages#price"
 end
