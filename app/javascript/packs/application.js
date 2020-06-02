@@ -26,10 +26,12 @@ $(document).on("turbolinks:load", function() {
 import "bootstrap";
 import { exitPopupLeaving } from "../components/exitpopup"
 import { closePromotionalPopup } from "../components/poppromotionclose"
+import { stripeCheckout } from "../components/stripe"
 
 document.addEventListener('turbolinks:load', () => {
   exitPopupLeaving();
   closePromotionalPopup();
+  stripeCheckout();
 });
 
 

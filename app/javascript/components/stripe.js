@@ -2,9 +2,9 @@ const stripeCheckout = () => {
 
   const buttonPayment = document.getElementById('checkout-button-price_HMAiSFFV5ugOIn')
   if (buttonPayment) {
-    var stripe = Stripe(process.env.STRIPE_PUBLISHABLE_KEY);
+    const stripe = Stripe(process.env.STRIPE_PUBLISHABLE_KEY);
 
-    var checkoutButton = document.getElementById('checkout-button-price_HMAiSFFV5ugOIn');
+    const checkoutButton = document.getElementById('checkout-button-price_HMAiSFFV5ugOIn');
     checkoutButton.addEventListener('click', function () {
       // When the customer clicks on the button, redirect
       // them to Checkout.
@@ -23,7 +23,7 @@ const stripeCheckout = () => {
         if (result.error) {
           // If `redirectToCheckout` fails due to a browser or network
           // error, display the localized error message to your customer.
-          var displayError = document.getElementById('error-message');
+          const displayError = document.getElementById('error-message');
           displayError.textContent = result.error.message;
         }
       });

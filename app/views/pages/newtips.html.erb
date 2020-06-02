@@ -8,7 +8,7 @@
       <%= link_to 'Ma formation', progressions_path, class: 'button-navbar' %>
     <% else %>
       <%= link_to 'Se connecter', new_user_session_path, class: 'not-active-link-home' %>
-      <%= link_to 'Acheter', "#", data: {toggle: "modal", target: "#priceModal"}, class: 'button-navbar' %>
+      <button class="button-navbar" id="checkout-button-price_HMAiSFFV5ugOIn" role="link">Acheter</button>
     <% end %>
   </div>
 </nav>
@@ -16,43 +16,5 @@
   <h2>Vous souhaitez recevoir un tips tous les jours sur votre boîte mail ?</h2>
   <%= render partial: "shared/form_sendinblue_full_page" %>
 </div>
-<div class="modal" id="priceModal"tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>La formation Exceltips c'est un premier pas vers l'apprentissage d'Excel</p>
-        <strong><p class="label-pointer">Alors, n'hésite plus ... DO IT !</p></strong>
-        <%= form_tag charges_path do %>
-          <article>
-            <% if flash[:error].present? %>
-              <div id="error_explanation">
-                <p><%= flash[:error] %></p>
-              </div>
-            <% end %>
-            <label class="amount">
-            </label>
-          </article>
-          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                  data-description="Formation Exceltips"
-                  data-amount="3750"
-                  data-currency="EUR"
-                  data-locale="auto">
-                  </script>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <i class="fab fa-cc-stripe icon-checkout"></i>
-        <i class="fab fa-cc-visa icon-checkout"></i>
-        <i class="fab fa-cc-mastercard icon-checkout"></i>
-        <i class="fas fa-shield-alt icon-checkout"></i>
-        <strong><h5>Paiement sécurisé via Stripe</h5></strong>
-      </div>
-    </div>
-  </div>
-</div>
+<script src="https://js.stripe.com/v3"></script>
+<div id="error-message"></div>
