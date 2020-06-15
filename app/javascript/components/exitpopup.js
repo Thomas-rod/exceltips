@@ -1,6 +1,6 @@
 const exitPopupLeaving = () => {
   if (document.getElementById('popup-leaving')) {
-    document.addEventListener('mousemove', (event) => {
+    document.addEventListener('mouseout', (event) => {
       let screenY = event.screenY
       if (screenY < 116) {
        document.getElementById('popup-leaving').style.display="block"
