@@ -4,6 +4,7 @@ const closePromotionalPopup = () => {
     closeButton.addEventListener('click', (event) => {
       document.querySelector('.promotional-banner-one').classList.add('inactive')
     });
+
   };
  }
 
